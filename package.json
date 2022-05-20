@@ -7,7 +7,7 @@
 	"bugs": {
 		"url": "https://github.com/thundercraft5/eslint-plugin/issues"
 	},
-	"version": "1.0.4",
+	"version": "1.0.5",
 	"description": "Eslint config for myself",
 	"main": "./dist/index.js",
 	"types": "./dist/index.d.ts",
@@ -22,6 +22,7 @@
 	"author": "Thundercraft5",
 	"license": "MIT",
 	"devDependencies": {
+		"@thundercraft5/tsconfig": "latest",
 		"@typescript-eslint/eslint-plugin": "5.25.0",
 		"@typescript-eslint/parser": "5.25.0",
 		"eslint": "8.15.0",
