@@ -13,7 +13,7 @@
 	"types": "./dist/index.d.ts",
 	"type": "module",
 	"engines": {
-		"node": "18x"
+		"node": "18.x"
 	},
 	"scripts": {
 		"prepublish": "npm run build",
