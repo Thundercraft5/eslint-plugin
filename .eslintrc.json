@@ -1,0 +1,9 @@
+{
+	"extends": [
+		"./src/configs/.eslintrc.typescript.json"
+	],
+	"ignorePatterns": [
+		"dist"
+	],
+	"root": true
+}

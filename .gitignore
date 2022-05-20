@@ -1,0 +1,4 @@
+node_modules
+.tmp-projections/**
+.vscode
+dist
