@@ -9,15 +9,20 @@
 	},
 	"version": "1.0.5",
 	"description": "Eslint config for myself",
-	"main": "./dist/index.js",
-	"types": "./dist/index.d.ts",
+	"types": "./dist/types/index.d.ts",
+	"exports": {
+		"import": "./dist/esm",
+		"require": "./dist/cjs"
+	},
+	"module": "",
 	"type": "module",
 	"engines": {
 		"node": "18.x"
 	},
 	"scripts": {
 		"prepublish": "npm run build",
-		"build": "esbuild src/index.ts --outdir=dist --sourcemap --bundle --format=esm --target=esnext && tsc"
+		"esbuild": "esbuild src/index.ts --sourcemap --bundle --sourcemap --target=esnext",
+		"build": "npm run esbuild -- --format=esm --outdir=./dist/esm && npm run esbuild -- --format=cjs --outfile=./dist/cjs/index.cjs && tsc"
 	},
 	"author": "Thundercraft5",
 	"license": "MIT",

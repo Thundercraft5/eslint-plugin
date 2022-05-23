@@ -1,8 +1,12 @@
 {
 	"extends": "@thundercraft5/tsconfig/node18.tsconfig.json",
 	"compilerOptions": {
+		"module": "esnext",
+		"moduleResolution": "node",
 		"outDir": "dist",
-		"target": "es2020",
+		"declaration": true,
+		"declarationDir": "dist/types",
+		"emitDeclarationOnly": true,
 		"lib": [
 			"esnext"
 		],
