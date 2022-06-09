@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json.schemastore.org/eslintrc.json",
 	"extends": [
-		"./.eslintrc.esnext.json",
-		"./.eslintrc.react.json"
+		"./esnext.eslintrc.json",
+		"./react.eslintrc.json"
 	]
 }

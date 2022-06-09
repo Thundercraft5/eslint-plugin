@@ -1,13 +1,12 @@
 {
 	"$schema": "https://json.schemastore.org/eslintrc.json",
 	"extends": [
-		"./plugin-configs/.eslintrc.import.json",
-		"./plugin-configs/.eslintrc.unicorn.json",
-		"./plugin-configs/.eslintrc.import.json"
+		"./plugin-configs/import.eslintrc.json",
+		"./plugin-configs/unicorn.eslintrc.json",
+		"./plugin-configs/import.eslintrc.json"
 	],
 	"plugins": [
-		"sort-exports",
-		"sort-export-all"
+		"simple-import-sort"
 	],
 	"reportUnusedDisableDirectives": true,
 	"globals": {},
@@ -873,13 +872,10 @@
 				"multiline": true
 			}
 		],
-		"sort-exports/sort-exports": [
-			"warn",
-			{
-				"sortDir": "asc"
-			}
+		"simple-import-sort/imports": [
+			"warn"
 		],
-		"sort-export-all/sort-export-all": [
+		"simple-import-sort/exports": [
 			"warn"
 		]
 	}

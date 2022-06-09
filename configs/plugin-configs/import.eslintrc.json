@@ -3,6 +3,18 @@
 	"plugins": [
 		"import"
 	],
+	"settings": {
+		"import/extensions": [
+			".ts",
+			".cts",
+			".mts",
+			".tsx",
+			".js",
+			".mjs",
+			".cjs",
+			".jsx"
+		]
+	},
 	"rules": {
 		"import/no-useless-path-segments": [
 			"warn"

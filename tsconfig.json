@@ -2,18 +2,16 @@
 	"extends": "@thundercraft5/tsconfig/node18.tsconfig.json",
 	"compilerOptions": {
 		"module": "esnext",
-		"moduleResolution": "node",
-		"outDir": "dist",
-		"declaration": true,
-		"declarationDir": "dist",
-		"emitDeclarationOnly": true,
+		"outDir": "./dist/esm",
 		"lib": [
 			"esnext"
 		],
-		"resolveJsonModule": true
+		"resolveJsonModule": true,
+		"incremental": false
 	},
 	"include": [
 		"src/**/*.ts",
+		"**/*.js",
 	],
 	"exclude": [
 		"node_modules",
