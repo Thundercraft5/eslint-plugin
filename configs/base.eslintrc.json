@@ -4,7 +4,7 @@
 		"./plugin-configs/import.eslintrc.json",
 		"./plugin-configs/unicorn.eslintrc.json",
 		"./plugin-configs/import.eslintrc.json",
-		"./plugin-configs/markdown.json"
+		"./plugin-configs/markdown.eslintrc.json"
 	],
 	"plugins": [
 		"simple-import-sort"
