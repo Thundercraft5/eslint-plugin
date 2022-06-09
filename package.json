@@ -35,7 +35,7 @@
 	"author": "Thundercraft5",
 	"license": "MIT",
 	"devDependencies": {
-		"@thundercraft5/eslint-config": "file:.",
+		"@thundercraft5/eslint-plugin": "file:.",
 		"@thundercraft5/tsconfig": "latest",
 		"@typescript-eslint/eslint-plugin": "5.25.0",
 		"@typescript-eslint/parser": "5.25.0",
@@ -45,6 +45,7 @@
 		"eslint": "8.15.0",
 		"eslint-import-resolver-typescript": "2.7.1",
 		"eslint-plugin-import": "2.26.0",
+		"eslint-plugin-markdown": "2.2.1",
 		"eslint-plugin-regexp": "1.7.0",
 		"eslint-plugin-simple-import-sort": "7.0.0",
 		"eslint-plugin-sort-export-all": "1.2.2",

@@ -73,7 +73,7 @@
 				"no-redeclare": "off",
 				"no-restricted-imports": "off",
 				"no-shadow": "off",
-				"no-throw-literal": "off",
+				"no-throw-literal": "warn",
 				"no-unused-expressions": "off",
 				"no-unused-vars": "off",
 				"no-use-before-define": "off",
@@ -88,6 +88,7 @@
 				"space-before-function-paren": "off",
 				"space-infix-ops": "off",
 				"import/named": "off",
+				"constructor-super": "off",
 				"@typescript-eslint/brace-style": [
 					"warn",
 					"1tbs",
@@ -207,7 +208,7 @@
 					"warn"
 				],
 				"@typescript-eslint/no-throw-literal": [
-					"warn"
+					"off"
 				],
 				"@typescript-eslint/no-unused-expressions": [
 					"warn",
