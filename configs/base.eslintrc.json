@@ -151,7 +151,8 @@
 		"comma-spacing": [
 			"warn",
 			{
-				"after": true
+				"after": true,
+				"before": false
 			}
 		],
 		"default-param-last": [
@@ -348,6 +349,19 @@
 		"no-constant-condition": [
 			"warn"
 		],
+		"no-whitespace-before-property": [
+			"warn"
+		],
+		"nonblock-statement-body-position": [
+			"warn",
+			{
+				"overrides": {
+					"while": "below",
+					"for": "below",
+					"do": "below"
+				}
+			}
+		],
 		"no-irregular-whitespace": [
 			"warn",
 			{
@@ -412,10 +426,15 @@
 			"off"
 		],
 		"no-multiple-empty-lines": [
-			"off"
+			"warn",
+			{
+				"max": 3,
+				"maxEOF": 0,
+				"maxBOF": 0
+			}
 		],
 		"no-new-symbol": [
-			"warn"
+			"error"
 		],
 		"no-self-compare": [
 			"warn"
