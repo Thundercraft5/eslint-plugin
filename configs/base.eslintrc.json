@@ -354,6 +354,7 @@
 		],
 		"nonblock-statement-body-position": [
 			"warn",
+			"aside",
 			{
 				"overrides": {
 					"while": "below",
