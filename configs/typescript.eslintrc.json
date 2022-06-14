@@ -25,6 +25,8 @@
 		"import/parsers": {
 			"@typescript-eslint/parser": [
 				".ts",
+				".cts",
+				".mts",
 				".tsx"
 			]
 		},
@@ -50,9 +52,16 @@
 				"*.cts",
 				"*.mts"
 			],
+			"settings": {
+				"import/resolver": {
+					"typescript": {
+						"project": "**/tsconfig.json"
+					}
+				}
+			},
 			"parser": "@typescript-eslint/parser",
 			"parserOptions": {
-				"project": "./tsconfig.json"
+				"project": "**/tsconfig.json"
 			},
 			"rules": {
 				"brace-style": "off",
@@ -183,16 +192,16 @@
 					"warn"
 				],
 				"@typescript-eslint/no-unsafe-assignment": [
-					"error"
+					"warn"
 				],
 				"@typescript-eslint/no-unsafe-argument": [
-					"error"
+					"warn"
 				],
 				"@typescript-eslint/no-unsafe-member-access": [
 					"error"
 				],
 				"@typescript-eslint/no-unsafe-return": [
-					"error"
+					"warn"
 				],
 				"@typescript-eslint/restrict-plus-operands": [
 					"error"
