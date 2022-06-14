@@ -292,7 +292,8 @@
 							"UPPER_CASE"
 						],
 						"modifiers": [
-							"const"
+							"const",
+							"global"
 						]
 					},
 					{
