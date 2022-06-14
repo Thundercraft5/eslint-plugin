@@ -7,7 +7,7 @@
 	"bugs": {
 		"url": "https://github.com/thundercraft5/eslint-plugin/issues"
 	},
-	"version": "1.5.0",
+	"version": "1.6.0",
 	"description": "Eslint config for myself",
 	"exports": {
 		".": {
