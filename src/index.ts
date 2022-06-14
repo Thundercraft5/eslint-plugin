@@ -1,5 +1,5 @@
 import * as configs from "./configs";
-	
+
 const pluginConfig = {
 	configs: {
 		"base": configs.base,
@@ -11,8 +11,6 @@ const pluginConfig = {
 		"typescript": configs.typescript,
 	},
 };
-
-
 
 
 

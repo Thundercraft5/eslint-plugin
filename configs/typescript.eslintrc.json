@@ -124,7 +124,10 @@
 				],
 				"@typescript-eslint/array-type": [
 					"warn",
-					"array"
+					{
+						"default": "array",
+						"readonly": "array"
+					}
 				],
 				"@typescript-eslint/no-redundant-type-constituents": [
 					"warn"
