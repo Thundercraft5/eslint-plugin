@@ -1,10 +1,13 @@
 {
-	"extends": "./configs/typescript.eslintrc.json",
+	"extends": [
+		"./configs/typescript.eslintrc.json"
+	],
 	"parserOptions": {
 		"sourceType": "module"
 	},
 	"ignorePatterns": [
 		"dist"
 	],
-	"root": true
+	"root": true,
+	"rules": {}
 }
