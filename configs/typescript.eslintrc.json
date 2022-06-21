@@ -301,7 +301,7 @@
 						"format": [
 							"UPPER_CASE",
 							"camelCase",
-							"StrictPascalCase"
+							"PascalCase"
 						]
 					},
 					{
@@ -326,7 +326,7 @@
 						],
 						"format": [
 							"camelCase",
-							"StrictPascalCase",
+							"PascalCase",
 							"UPPER_CASE"
 						],
 						"leadingUnderscore": "allowSingleOrDouble",
@@ -337,7 +337,7 @@
 							"typeLike"
 						],
 						"format": [
-							"StrictPascalCase"
+							"PascalCase"
 						]
 					},
 					{
@@ -345,7 +345,8 @@
 							"default"
 						],
 						"format": [
-							"camelCase"
+							"camelCase",
+							"PascalCase"
 						],
 						"leadingUnderscore": "allowSingleOrDouble",
 						"trailingUnderscore": "forbid"
