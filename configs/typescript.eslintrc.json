@@ -624,7 +624,10 @@
 					}
 				],
 				"@typescript-eslint/no-redeclare": [
-					"error"
+					"error",
+					{
+						"ignoreDeclarationMerge": true
+					}
 				],
 				"@typescript-eslint/no-restricted-imports": [
 					"warn"
