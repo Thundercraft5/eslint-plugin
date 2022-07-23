@@ -11,3 +11,7 @@ List of available configs:
 - `react` - Base configuration for JSX-based projects
 - `react-esnext` - React projects in ESNext
 - `typescript` - For typescript projects
+
+```js
+function test() {}
+```

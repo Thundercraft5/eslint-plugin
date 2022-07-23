@@ -43,9 +43,6 @@
 		"import/no-self-import": [
 			"error"
 		],
-		"import/no-unused-modules": [
-			"warn"
-		],
 		"import/first": [
 			"warn"
 		],
