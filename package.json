@@ -7,7 +7,7 @@
 	"bugs": {
 		"url": "https://github.com/thundercraft5/eslint-plugin/issues"
 	},
-	"version": "1.10.0",
+	"version": "1.11.0",
 	"description": "Eslint config for myself",
 	"exports": {
 		".": {
@@ -26,37 +26,57 @@
 		"node": "18.x"
 	},
 	"scripts": {
-		"prepublish": "npm run build",
+		"prepublishOnly": "npm run build",
 		"build:types": "tsc --declaration --declarationMap --emitDeclarationOnly --declarationDir ./dist/types --module esnext",
-		"build:esm": "tsc --build --force && copyfiles ./configs/**/*.json ./dist/esm -u 1 -F && copy .\\wrappers\\index.js .\\dist\\esm\\wrapper.js",
+		"build:esm": "tsc -b -f && copyfiles ./configs/**/*.json ./dist/esm -u 1 -F && copy .\\wrappers\\index.js .\\dist\\esm\\wrapper.js",
 		"build:cjs": "tsup ./src --out-dir ./dist/cjs --shims --target esnext --sourcemap --format cjs && copyfiles ./configs/**/*.json ./dist/cjs -u 1 -F && copy .\\wrappers\\index.cjs .\\dist\\cjs\\wrapper.cjs",
-		"build": "del-cli ./dist/** -f && npm run build:types & npm run build:cjs & npm run build:esm"
+		"build": "del-cli ./dist/** -f && npm run build:types & npm run build:cjs & npm run build:esm",
+		"watch": "concurrently -k \"tsup ./src --watch --out-dir ./dist/cjs --shims --target esnext --sourcemap --format cjs\" \"tsc -w\""
 	},
 	"author": "Thundercraft5",
 	"license": "MIT",
 	"devDependencies": {
 		"@thundercraft5/eslint-plugin": "file:.",
 		"@thundercraft5/tsconfig": "latest",
-		"@typescript-eslint/eslint-plugin": "5.36.3-alpha.2",
-		"@typescript-eslint/parser": "5.36.3-alpha.2",
+		"@thundercraft5/type-utils": "file:../type-utils",
+		"@types/dedent": "0.7.0",
+		"@types/eslint": "8.4.6",
+		"@types/estree": "1.0.0",
+		"@typescript-eslint/utils": "5.40.1",
+		"concurrently": "7.4.0",
 		"copyfiles": "2.4.1",
-		"del-cli": "5.0.0",
-		"eslint": "8.23.0",
+		"dedent": "0.7.0",
+		"del-cli": "5.0.0"
+	},
+	"peerDependencies": {
+		"eslint": "latest",
+		"typescript": "latest"
+	},
+	"dependencies": {
+		"@thundercraft5/node-errors": "1.5.0",
+		"@typescript-eslint/eslint-plugin": "5.40.1",
+		"@typescript-eslint/parser": "5.40.1",
+		"eslint": "latest",
 		"eslint-import-resolver-typescript": "3.5.1",
+		"eslint-plugin-eslint-comments": "3.2.0",
 		"eslint-plugin-import": "2.26.0",
+		"eslint-plugin-import-newlines": "1.2.3",
 		"eslint-plugin-markdown": "3.0.0",
+		"eslint-plugin-mdx": "2.0.5",
+		"eslint-plugin-n": "15.3.0",
+		"eslint-plugin-react": "7.31.10",
 		"eslint-plugin-regexp": "1.9.0",
 		"eslint-plugin-simple-import-sort": "8.0.0",
 		"eslint-plugin-sort-export-all": "1.2.2",
 		"eslint-plugin-sort-exports": "0.7.0",
-		"eslint-plugin-unicorn": "43.0.2",
+		"eslint-plugin-unicorn": "44.0.2",
 		"ts-node": "10.9.1",
-		"typescript": "4.9.0-dev.20220908"
-	},
-	"peerDependencies": {
-		"eslint": "latest"
+		"typescript": "latest"
 	},
 	"files": [
 		"dist"
-	]
+	],
+	"typedoc": {
+		"entryPoint": "./src/index.ts"
+	}
 }
