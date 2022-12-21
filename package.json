@@ -26,11 +26,12 @@
 		"node": "18.x"
 	},
 	"scripts": {
-		"prepublish": "npm run build",
+		"prepublishOnly": "npm run build",
 		"build:types": "tsc --declaration --declarationMap --emitDeclarationOnly --declarationDir ./dist/types --module esnext",
-		"build:esm": "tsc --build --force && copyfiles ./configs/**/*.json ./dist/esm -u 1 -F && copy .\\wrappers\\index.js .\\dist\\esm\\wrapper.js",
+		"build:esm": "tsc -b -f && copyfiles ./configs/**/*.json ./dist/esm -u 1 -F && copy .\\wrappers\\index.js .\\dist\\esm\\wrapper.js",
 		"build:cjs": "tsup ./src --out-dir ./dist/cjs --shims --target esnext --sourcemap --format cjs && copyfiles ./configs/**/*.json ./dist/cjs -u 1 -F && copy .\\wrappers\\index.cjs .\\dist\\cjs\\wrapper.cjs",
-		"build": "del-cli ./dist/** -f && npm run build:types & npm run build:cjs & npm run build:esm"
+		"build": "del-cli ./dist/** -f && npm run build:types & npm run build:cjs & npm run build:esm",
+		"watch": "concurrently -k \"tsup ./src --watch --out-dir ./dist/cjs --shims --target esnext --sourcemap --format cjs\" \"tsc -w\""
 	},
 	"author": "Thundercraft5",
 	"license": "MIT",
@@ -44,6 +45,7 @@
 		"eslint": "8.30.0",
 		"eslint-import-resolver-typescript": "3.5.2",
 		"eslint-plugin-import": "2.26.0",
+		"eslint-plugin-import-newlines": "1.2.3",
 		"eslint-plugin-markdown": "3.0.0",
 		"eslint-plugin-regexp": "1.11.0",
 		"eslint-plugin-simple-import-sort": "8.0.0",
