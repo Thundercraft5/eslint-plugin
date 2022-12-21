@@ -8,7 +8,7 @@
 		"url": "https://github.com/thundercraft5/eslint-plugin/issues"
 	},
 	"version": "1.10.0",
-	"description": "Eslint config for myself",
+	"description": "Personal ESLint configuration and plugin",
 	"exports": {
 		".": {
 			"import": "./dist/esm/wrapper.js",
@@ -37,26 +37,29 @@
 	"devDependencies": {
 		"@thundercraft5/eslint-plugin": "file:.",
 		"@thundercraft5/tsconfig": "latest",
-		"@typescript-eslint/eslint-plugin": "5.36.3-alpha.2",
-		"@typescript-eslint/parser": "5.36.3-alpha.2",
+		"@typescript-eslint/eslint-plugin": "5.47.1-alpha.1",
+		"@typescript-eslint/parser": "5.47.1-alpha.1",
 		"copyfiles": "2.4.1",
 		"del-cli": "5.0.0",
-		"eslint": "8.23.0",
-		"eslint-import-resolver-typescript": "3.5.1",
+		"eslint": "8.30.0",
+		"eslint-import-resolver-typescript": "3.5.2",
 		"eslint-plugin-import": "2.26.0",
 		"eslint-plugin-markdown": "3.0.0",
-		"eslint-plugin-regexp": "1.9.0",
+		"eslint-plugin-regexp": "1.11.0",
 		"eslint-plugin-simple-import-sort": "8.0.0",
 		"eslint-plugin-sort-export-all": "1.2.2",
-		"eslint-plugin-sort-exports": "0.7.0",
-		"eslint-plugin-unicorn": "43.0.2",
+		"eslint-plugin-sort-exports": "0.8.0",
+		"eslint-plugin-unicorn": "45.0.2",
 		"ts-node": "10.9.1",
-		"typescript": "4.9.0-dev.20220908"
+		"typescript": "5.0.0-dev.20221221"
 	},
 	"peerDependencies": {
 		"eslint": "latest"
 	},
 	"files": [
 		"dist"
-	]
+	],
+	"dependencies": {
+		"dedent": "0.7.0"
+	}
 }

@@ -1,0 +1,19 @@
+{
+	"$schema": "https://json.schemastore.org/eslintrc",
+	"overrides": [
+		{
+			"files": [
+				"*.mdx"
+			],
+			"processor": "mdx/remark",
+			"plugins": [
+				"mdx"
+			],
+			"parser": "eslint-mdx",
+			"rules": {
+				"mdx/remark": "warn",
+				"no-unused-expressions": "error"
+			}
+		}
+	]
+}

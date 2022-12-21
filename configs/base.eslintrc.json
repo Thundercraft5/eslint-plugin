@@ -226,7 +226,20 @@
 			{
 				"blankLine": "always",
 				"prev": "*",
-				"next": "for"
+				"next": "multiline-block-like"
+			},
+			{
+				"blankLine": "always",
+				"prev": "multiline-block-like",
+				"next": "*"
+			},
+			{
+				"blankLine": "always",
+				"prev": [
+					"function",
+					"class"
+				],
+				"next": "*"
 			},
 			{
 				"blankLine": "always",
@@ -240,8 +253,8 @@
 					"block-like",
 					"break",
 					"case",
-					"cjs-export",
-					"cjs-import",
+					"exports",
+					"require",
 					"class",
 					"continue",
 					"debugger",
@@ -280,6 +293,11 @@
 				]
 			},
 			{
+				"blankLine": "never",
+				"prev": "*",
+				"next": "directive"
+			},
+			{
 				"blankLine": "always",
 				"prev": "directive",
 				"next": "*"
@@ -291,8 +309,23 @@
 			},
 			{
 				"blankLine": "always",
+				"prev": "*",
+				"next": "export"
+			},
+			{
+				"blankLine": "always",
+				"prev": "export",
+				"next": "*"
+			},
+			{
+				"blankLine": "never",
+				"prev": "export",
+				"next": "export"
+			},
+			{
+				"blankLine": "always",
 				"prev": [
-					"cjs-import",
+					"require",
 					"import"
 				],
 				"next": "*"
@@ -300,11 +333,11 @@
 			{
 				"blankLine": "any",
 				"prev": [
-					"cjs-import",
+					"require",
 					"import"
 				],
 				"next": [
-					"cjs-import",
+					"require",
 					"import"
 				]
 			},
@@ -582,7 +615,12 @@
 			"warn"
 		],
 		"quotes": [
-			"warn"
+			"warn",
+			"double",
+			{
+				"avoidEscape": true,
+				"allowTemplateLiterals": true
+			}
 		],
 		"arrow-spacing": [
 			"warn",
@@ -854,7 +892,7 @@
 		],
 		"one-var-declaration-per-line": [
 			"warn",
-			"always"
+			"initializations"
 		],
 		"prefer-object-spread": [
 			"warn"

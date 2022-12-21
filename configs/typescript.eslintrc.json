@@ -668,7 +668,20 @@
 					{
 						"blankLine": "always",
 						"prev": "*",
-						"next": "for"
+						"next": "multiline-block-like"
+					},
+					{
+						"blankLine": "always",
+						"prev": "multiline-block-like",
+						"next": "*"
+					},
+					{
+						"blankLine": "always",
+						"prev": [
+							"function",
+							"class"
+						],
+						"next": "*"
 					},
 					{
 						"blankLine": "always",
@@ -722,6 +735,11 @@
 						]
 					},
 					{
+						"blankLine": "never",
+						"prev": "*",
+						"next": "directive"
+					},
+					{
 						"blankLine": "always",
 						"prev": "directive",
 						"next": "*"
@@ -730,6 +748,21 @@
 						"blankLine": "any",
 						"prev": "directive",
 						"next": "directive"
+					},
+					{
+						"blankLine": "always",
+						"prev": "*",
+						"next": "export"
+					},
+					{
+						"blankLine": "always",
+						"prev": "export",
+						"next": "*"
+					},
+					{
+						"blankLine": "never",
+						"prev": "export",
+						"next": "export"
 					},
 					{
 						"blankLine": "always",
@@ -760,7 +793,12 @@
 					}
 				],
 				"@typescript-eslint/quotes": [
-					"warn"
+					"warn",
+					"double",
+					{
+						"avoidEscape": true,
+						"allowTemplateLiterals": true
+					}
 				],
 				"@typescript-eslint/require-await": [
 					"warn"

@@ -1,0 +1,31 @@
+{
+	"plugins": [
+		"eslint-comments"
+	],
+	"rules": {
+		"eslint-comments/no-unused-disable": [
+			"warn"
+		],
+		"eslint-comments/no-unused-enable": [
+			"warn"
+		],
+		"eslint-comments/no-duplicate-disable": [
+			"warn"
+		],
+		"eslint-comments/no-aggregating-enable": [
+			"warn"
+		],
+		"eslint-comments/no-use": [
+			"warn",
+			{
+				"allow": [
+					"eslint-disable-next-line",
+					"eslint-disable-line",
+					"eslint-enable",
+					"eslint-disable",
+					"global"
+				]
+			}
+		]
+	}
+}

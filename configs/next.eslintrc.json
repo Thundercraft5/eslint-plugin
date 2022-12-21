@@ -1,0 +1,9 @@
+{
+	"$schema": "https://json.schemastore.org/eslintrc.json",
+	"extends": [
+		"./modules.eslintrc.json",
+		"./typescript.eslintrc.json",
+		"./react.eslintrc.json"
+	],
+	"rules": {}
+}
