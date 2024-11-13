@@ -4,7 +4,7 @@ import { AST_NODE_TYPES, ESLintUtils } from "@typescript-eslint/utils";
 
 import { createRule } from "../util";
 
-import type { ImportDeclaration } from "@typescript-eslint/types/dist/generated/ast-spec";
+import type { ImportDeclaration } from "@typescript-eslint/types";
 
 
 export const defaultOptions = [] as const;

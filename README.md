@@ -1,7 +1,11 @@
+---
+Created: 20[[24-04-13]]T13:32
+Edited: 2024-11-13T18:35
+---
 # eslint-plugin
-ESLint Plugin for myself.
+ESLint Plugin for my own NPM projects.
 
-## !! This plugin is WIP indefinitely, and may break at any time. Don't depend on it for stability.
+## ⚠ This plugin is WIP & alpha indefinitely, and may break at any time. Don't depend on it for stability. ⚠
 
 List of available configs:
 - `base` - Base configuration
@@ -11,7 +15,3 @@ List of available configs:
 - `react` - Base configuration for JSX-based projects
 - `react-esnext` - React projects in ESNext
 - `typescript` - For typescript projects
-
-```js
-function test() {}
-```

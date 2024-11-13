@@ -38,22 +38,23 @@
 	"devDependencies": {
 		"@thundercraft5/eslint-plugin": "file:.",
 		"@thundercraft5/tsconfig": "latest",
-		"@typescript-eslint/eslint-plugin": "5.47.1-alpha.1",
-		"@typescript-eslint/parser": "5.47.1-alpha.1",
+		"@typescript-eslint/eslint-plugin": "8.14.0",
+		"@typescript-eslint/parser": "8.14.0",
+		"@typescript-eslint/types": "^8.14.0",
 		"copyfiles": "2.4.1",
-		"del-cli": "5.0.0",
-		"eslint": "8.30.0",
-		"eslint-import-resolver-typescript": "3.5.2",
-		"eslint-plugin-import": "2.26.0",
-		"eslint-plugin-import-newlines": "1.2.3",
-		"eslint-plugin-markdown": "3.0.0",
-		"eslint-plugin-regexp": "1.11.0",
-		"eslint-plugin-simple-import-sort": "8.0.0",
-		"eslint-plugin-sort-export-all": "1.2.2",
-		"eslint-plugin-sort-exports": "0.8.0",
-		"eslint-plugin-unicorn": "45.0.2",
-		"ts-node": "10.9.1",
-		"typescript": "5.0.0-dev.20221221"
+		"del-cli": "6.0.0",
+		"eslint": "9.14.0",
+		"eslint-import-resolver-typescript": "3.6.3",
+		"eslint-plugin-import": "2.31.0",
+		"eslint-plugin-import-newlines": "1.4.0",
+		"eslint-plugin-markdown": "5.1.0",
+		"eslint-plugin-regexp": "2.6.0",
+		"eslint-plugin-simple-import-sort": "12.1.1",
+		"eslint-plugin-sort-export-all": "1.4.1",
+		"eslint-plugin-sort-exports": "0.9.1",
+		"eslint-plugin-unicorn": "56.0.0",
+		"ts-node": "11.0.0-beta.1",
+		"typescript": "5.8.0-dev.20241113"
 	},
 	"peerDependencies": {
 		"eslint": "latest"
@@ -62,6 +63,6 @@
 		"dist"
 	],
 	"dependencies": {
-		"dedent": "0.7.0"
+		"dedent": "1.5.3"
 	}
 }

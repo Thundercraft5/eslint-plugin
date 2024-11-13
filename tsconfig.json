@@ -1,13 +1,14 @@
 {
-	"extends": "@thundercraft5/tsconfig/node18.tsconfig.json",
+	"extends": "@thundercraft5/tsconfig/node-next.tsconfig.json",
 	"compilerOptions": {
 		"module": "esnext",
-		"outDir": "./dist/esm",
+		"outDir": "./dist/esm", 
 		"lib": [
 			"esnext"
 		],
 		"resolveJsonModule": true,
-		"incremental": false
+		"incremental": false,
+		"skipLibCheck": true
 	},
 	"include": [
 		"src/**/*.ts",
