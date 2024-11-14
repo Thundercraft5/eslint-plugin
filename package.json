@@ -63,6 +63,7 @@
 		"dist"
 	],
 	"dependencies": {
-		"dedent": "1.5.3"
+		"dedent": "1.5.3",
+		"tsutils": "^3.21.0"
 	}
 }
