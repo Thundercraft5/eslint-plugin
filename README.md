@@ -1,11 +1,11 @@
 ---
-Created: 20[[24-04-13]]T13:32
-Edited: 2024-11-13T18:35
+Created: 2024-04-13T13:32
+Edited: 2024-11-13T19:18
 ---
-# eslint-plugin
-ESLint Plugin for my own NPM projects.
+# `@thundercraft5/eslint-plugin`
+An ESLint Plugin for my own NPM projects.
 
-## ⚠ This plugin is WIP & alpha indefinitely, and may break at any time. Don't depend on it for stability. ⚠
+**⚠ This plugin is WIP & alpha indefinitely, and may break at any time. Don't depend on it for stability. ⚠**
 
 List of available configs:
 - `base` - Base configuration
