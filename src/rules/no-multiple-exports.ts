@@ -2,7 +2,6 @@ import { AST_TOKEN_TYPES } from "@typescript-eslint/utils";
 
 import { createRule } from "../util";
 
-import type { RuleFix, RuleFixer } from "@typescript-eslint/utils/dist/ts-eslint";
 import type * as eslint from "eslint";
 
 export const defaultOptions = [] as const;
@@ -17,7 +16,7 @@ export default createRule({
 		type: "layout",
 		docs: {
 			description: "Disallows multiple exports with no code in-between.",
-			recommended: "warn",
+			recommended: "recommended",
 		},
 		messages: {
 			multipleExports: "Multiple consecutive exports must be merged.",

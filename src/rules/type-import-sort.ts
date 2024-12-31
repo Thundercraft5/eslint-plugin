@@ -2,7 +2,6 @@ import * as ts from "typescript";
 import * as tsutils from "tsutils";
 import { AST_NODE_TYPES, ESLintUtils } from "@typescript-eslint/utils";
 
-import { ImportDefaultSpecifier, ImportSpecifier } from "@typescript-eslint/types/dist/generated/ast-spec";
 
 import { createRule } from "../util";
 
@@ -20,8 +19,8 @@ export default createRule({
 	meta: {
 		fixable: "code",
 		docs: {
+			recommended: "recommended",
 			description: "", // TODO: add documentation
-			recommended: "warn",
 		},
 		messages: {
 			// TODO

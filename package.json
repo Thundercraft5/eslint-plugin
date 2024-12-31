@@ -7,54 +7,57 @@
 	"bugs": {
 		"url": "https://github.com/thundercraft5/eslint-plugin/issues"
 	},
-	"version": "1.12.2",
+	"author": "Thundercraft5",
+	"version": "2.0.0",
+	"license": "MIT",
 	"description": "Personal ESLint configuration and plugin",
 	"exports": {
 		".": {
-			"import": "./dist/esm/wrapper.js",
-			"require": "./dist/cjs/wrapper.cjs",
+			"import": "./dist/esm/index.js",
+			"require": "./dist/cjs/index.cjs",
 			"types": "./dist/types/index.d.ts"
 		},
 		"./package.json": "./package.json",
 		"./dist/esm/configs": "./dist/esm/configs.js"
 	},
-	"module": "./dist/esm/wrapper.js",
-	"main": "./dist/cjs/wrapper.cjs",
+	"module": "./dist/esm/index.js",
+	"main": "./dist/cjs/index.cjs",
 	"types": "./dist/types/index.d.ts",
 	"type": "module",
 	"engines": {
-		"node": "18.x"
+		"node": "23.x"
 	},
 	"scripts": {
 		"prepublishOnly": "npm run build",
 		"build:types": "tsc --declaration --declarationMap --emitDeclarationOnly --declarationDir ./dist/types --module esnext",
-		"build:esm": "tsc -b -f && copyfiles ./configs/**/*.json ./dist/esm -u 1 -F && copy .\\wrappers\\index.js .\\dist\\esm\\wrapper.js",
+		"build:esm": "esbuild ./src/**/*.ts --format=esm --outdir=dist/esm --sourcemap",
 		"build:cjs": "tsup ./src --out-dir ./dist/cjs --shims --target esnext --sourcemap --format cjs && copyfiles ./configs/**/*.json ./dist/cjs -u 1 -F && copy .\\wrappers\\index.cjs .\\dist\\cjs\\wrapper.cjs",
 		"build": "del-cli ./dist/** -f && npm run build:types & npm run build:cjs & npm run build:esm",
 		"watch": "concurrently -k \"tsup ./src --watch --out-dir ./dist/cjs --shims --target esnext --sourcemap --format cjs\" \"tsc -w\""
 	},
-	"author": "Thundercraft5",
-	"license": "MIT",
 	"devDependencies": {
 		"@thundercraft5/eslint-plugin": "file:.",
-		"@thundercraft5/tsconfig": "latest",
-		"@typescript-eslint/eslint-plugin": "8.14.0",
-		"@typescript-eslint/parser": "8.14.0",
-		"@typescript-eslint/types": "^8.14.0",
+		"@thundercraft5/tsconfig": "^2.0.0",
+		"@thundercraft5/type-utils": "^4.0.2",
+		"@types/node": "^22.10.2",
+		"@typescript-eslint/eslint-plugin": "8.19.1-alpha.6",
+		"@typescript-eslint/parser": "8.19.1-alpha.6",
+		"@typescript-eslint/types": "^8.19.1-alpha.6",
 		"copyfiles": "2.4.1",
 		"del-cli": "6.0.0",
-		"eslint": "9.14.0",
-		"eslint-import-resolver-typescript": "3.6.3",
+		"eslint": "9.17.0",
+		"eslint-import-resolver-typescript": "3.7.0",
 		"eslint-plugin-import": "2.31.0",
 		"eslint-plugin-import-newlines": "1.4.0",
 		"eslint-plugin-markdown": "5.1.0",
-		"eslint-plugin-regexp": "2.6.0",
+		"eslint-plugin-regexp": "2.7.0",
 		"eslint-plugin-simple-import-sort": "12.1.1",
 		"eslint-plugin-sort-export-all": "1.4.1",
 		"eslint-plugin-sort-exports": "0.9.1",
-		"eslint-plugin-unicorn": "56.0.0",
+		"eslint-plugin-unicorn": "56.0.1",
 		"ts-node": "11.0.0-beta.1",
-		"typescript": "5.8.0-dev.20241113"
+		"tsup": "^8.3.5",
+		"typescript": "5.8.0-dev.20241231"
 	},
 	"peerDependencies": {
 		"eslint": "latest"
@@ -64,6 +67,7 @@
 	],
 	"dependencies": {
 		"dedent": "1.5.3",
+		"eslint-plugin-react": "^7.37.3",
 		"tsutils": "^3.21.0"
 	}
 }

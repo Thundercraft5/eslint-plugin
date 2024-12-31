@@ -1,8 +1,7 @@
+import type { ReportFixFunction } from "@typescript-eslint/utils/ts-eslint";
 import { createRule } from "../util";
 
 import type { ASTUtils, ESLintUtils } from "@typescript-eslint/utils";
-import type { ReportFixFunction, RuleFix, RuleFixer } from "@typescript-eslint/utils/dist/ts-eslint";
-
 
 
 export const defaultOptions = [
@@ -17,7 +16,7 @@ export default createRule({
 		type: "layout",
 		docs: {
 			description: "Enforces consistency with newlines on import items.",
-			recommended: "warn",
+			recommended: "recommended",
 		},
 		messages: {
 			namedExportItemLines: "Named export `{{name}}` must be placed on a new line.",

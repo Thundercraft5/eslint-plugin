@@ -1,10 +1,10 @@
 import { ESLintUtils } from "@typescript-eslint/utils";
 
-import type { Narrow } from "@thundercraft5/type-utils";
+import type { Narrow } from "@thundercraft5/type-utils";	
 import type { TSESTree } from "@typescript-eslint/utils";
-import type { RuleContext } from "@typescript-eslint/utils/dist/ts-eslint";
+import type { ESLintPluginDocs } from "@typescript-eslint/eslint-plugin/use-at-your-own-risk/rules";
 
-export const createRule = ESLintUtils.RuleCreator(
+export const createRule = ESLintUtils.RuleCreator<ESLintPluginDocs>(
 	name => `https://thundercraft5.github.io/packages/eslint-plugin/${ name }`,
 );	
 

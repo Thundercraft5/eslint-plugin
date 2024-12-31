@@ -1,5 +1,5 @@
 /* eslint-disable function-paren-newline */
-import { ImportDefaultSpecifier, ImportSpecifier } from "@typescript-eslint/types/dist/generated/ast-spec";
+// import { ImportDefaultSpecifier, ImportSpecifier } from "@typescript-eslint/utils";
 import { AST_NODE_TYPES, ESLintUtils } from "@typescript-eslint/utils";
 import * as tsutils from "tsutils";
 import * as ts from "typescript";
@@ -14,8 +14,8 @@ export default createRule({
 	meta: {
 		fixable: "code",
 		docs: {
+			recommended: "recommended",
 			description: "Disallows value import declarations with only type-only specifiers.",
-			recommended: "warn",
 		},
 		messages: {
 			onlyTypeImports: "All specifiers of import declaration {{path}} are marked as type-only.",

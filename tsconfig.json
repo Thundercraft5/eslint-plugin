@@ -1,21 +1,21 @@
 {
-	"extends": "@thundercraft5/tsconfig/node-next.tsconfig.json",
+	"extends": "@thundercraft5/tsconfig/node-next.json",
 	"compilerOptions": {
+		"rootDir": "./src",
+		"baseUrl": "./src",
 		"module": "esnext",
+		"moduleResolution": "bundler",
 		"outDir": "./dist/esm", 
 		"lib": [
 			"esnext"
 		],
 		"resolveJsonModule": true,
-		"incremental": false,
-		"skipLibCheck": true
+		"incremental": true,
+		"composite": true,
+		"skipLibCheck": true,
+		"rewriteRelativeImportExtensions": true
 	},
 	"include": [
-		"src/**/*.ts",
-		"**/*.js",
-	],
-	"exclude": [
-		"node_modules",
-		"./dist/**"
-	]
+		"src/**/*.ts"
+, "test/index.ts"	]
 }

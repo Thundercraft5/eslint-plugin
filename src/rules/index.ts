@@ -1,4 +1,3 @@
-import { builtinModules } from "module";
 
 import consistentTypeImports from "./consistent-type-imports";
 import noAmbiguousTypeImports from "./no-ambiguous-type-only-imports";

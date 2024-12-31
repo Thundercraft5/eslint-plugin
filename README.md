@@ -1,6 +1,6 @@
 ---
 Created: 2024-04-13T13:32
-Edited: 2024-11-13T19:18
+Edited: 2024-11-13T21:22
 ---
 # `@thundercraft5/eslint-plugin`
 An ESLint Plugin for my own NPM projects.
