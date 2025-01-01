@@ -1,6 +1,6 @@
 import { AST_TOKEN_TYPES } from "@typescript-eslint/utils";
 
-import { createRule } from "../util";
+import { createRule } from "../util/index.ts";
 
 import type * as eslint from "eslint";
 
@@ -59,7 +59,7 @@ export default createRule({
 							sourceCode.getLastToken(end)!,
 						),
 
-					 transform = [
+						transform = [
 							...tokens
 							.filter(t => t.type === "Identifier" && sourceCode.getTokenAfter(t)?.value !== "," && t.value !== "type")
 							.slice(0, -1) // Don't add comma at end exports of list

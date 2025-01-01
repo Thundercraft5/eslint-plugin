@@ -1,123 +1,124 @@
-import regexp from "eslint-plugin-regexp"
+import regexp from "eslint-plugin-regexp";
 
 export default {
-	"files": [
-		"*/**.{js,ts,tsx,mts,cjs,mjs,cts}"
+	"name": "plugin/regexp",
+	"files": [	
+		"*/**.{js,ts,tsx,mts,cjs,mjs,cts}",
 	],
 	"plugins": {
-		regexp
+		regexp,
 	},
 	"rules": {
 		"regexp/no-empty-alternative": [
-			"warn"
+			"warn",
 		],
 		"regexp/no-empty-capturing-group": [
-			"warn"
+			"warn",
 		],
 		"regexp/no-empty-character-class": [
-			"warn"
+			"warn",
 		],
 		"regexp/no-empty-group": [
-			"warn"
+			"warn",
 		],
 		"regexp/no-empty-lookarounds-assertion": [
-			"warn"
+			"warn",
 		],
 		"regexp/no-lazy-ends": [
 			"warn",
 			{
-				"ignorePartial": true
-			}
+				"ignorePartial": true,
+			},
 		],
 		"regexp/no-useless-assertions": [
-			"warn"
+			"warn",
 		],
 		"regexp/no-useless-backreference": [
-			"warn"
+			"warn",
 		],
 		"regexp/no-useless-dollar-replacements": [
-			"warn"
+			"warn",
 		],
 		"regexp/no-dupe-disjunctions": [
-			"warn"
+			"warn",
 		],
 		"regexp/confusing-quantifier": [
-			"warn"
+			"warn",
 		],
 		"regexp/control-character-escape": [
-			"warn"
+			"warn",
 		],
 		"regexp/negation": [
-			"warn"
+			"warn",
 		],
 		"regexp/no-dupe-characters-character-class": [
-			"warn"
+			"warn",
 		],
 		"regexp/no-invisible-character": [
-			"warn"
+			"warn",
 		],
 		"regexp/no-legacy-features": [
-			"warn"
+			"warn",
 		],
 		"regexp/no-non-standard-flag": [
-			"warn"
+			"warn",
 		],
 		"regexp/no-obscure-range": [
-			"warn"
+			"warn",
 		],
 		"regexp/no-octal": [
-			"warn"
+			"warn",
 		],
 		"regexp/no-standalone-backslash": [
-			"warn"
+			"warn",
 		],
 		"regexp/no-trivially-nested-assertion": [
-			"warn"
+			"warn",
 		],
 		"regexp/no-trivially-nested-quantifier": [
-			"warn"
+			"warn",
 		],
 		"regexp/no-unused-capturing-group": [
-			"warn"
+			"warn",
 		],
 		"regexp/sort-flags": [
-			"warn"
+			"warn",
 		],
 		"regexp/unicode-escape": [
-			"warn"
+			"warn",
 		],
 		"regexp/sort-character-class-elements": [
-			"warn"
+			"warn",
 		],
 		"regexp/prefer-result-array-groups": [
-			"warn"
+			"warn",
 		],
 		"regexp/prefer-question-quantifier": [
-			"warn"
+			"warn",
 		],
 		"regexp/prefer-plus-quantifier": [
-			"warn"
+			"warn",
 		],
 		"regexp/require-unicode-regexp": [
-			"warn"
+			"warn",
 		],
 		"regexp/no-useless-two-nums-quantifier": [
-			"warn"
+			"warn",
 		],
 		"regexp/optimal-lookaround-quantifier": [
-			"warn"
+			"warn",
 		],
 		"regexp/optimal-quantifier-concatenation": [
-			"warn"
+			"warn",
 		],
 		"regexp/prefer-predefined-assertion": [
-			"warn"
+			"warn",
 		],
 		"regexp/use-ignore-case": [
-			"warn"
+			"warn",
 		],
 		"regexp/hexadecimal-escape": [
-			"warn"
+			"warn",
 		],
 		"regexp/letter-case": [
 			"warn",
@@ -125,8 +126,8 @@ export default {
 				"caseInsensitive": "lowercase",
 				"unicodeEscape": "uppercase",
 				"hexadecimalEscape": "uppercase",
-				"controlEscape": "uppercase"
-			}
-		]
-	}
-}
+				"controlEscape": "uppercase",
+			},
+		],
+	},
+};		

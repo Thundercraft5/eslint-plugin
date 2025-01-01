@@ -1,9 +1,8 @@
-import node from "eslint-plugin-node"; // @ts-ignore
+import node from "eslint-plugin-node";
 
 export default {
-	
+	"name": "node",
 	"plugins": {
-		node
+		node,
 	},	
-	
-}
+};	

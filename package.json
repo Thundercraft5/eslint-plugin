@@ -30,16 +30,17 @@
 	"scripts": {
 		"prepublishOnly": "npm run build",
 		"build:types": "tsc --declaration --declarationMap --emitDeclarationOnly --declarationDir ./dist/types --module esnext",
-		"build:esm": "esbuild ./src/**/*.ts --format=esm --outdir=dist/esm --sourcemap",
+		"build:esm": "tsc -b -f",
 		"build:cjs": "tsup ./src --out-dir ./dist/cjs --shims --target esnext --sourcemap --format cjs && copyfiles ./configs/**/*.json ./dist/cjs -u 1 -F && copy .\\wrappers\\index.cjs .\\dist\\cjs\\wrapper.cjs",
 		"build": "del-cli ./dist/** -f && npm run build:types & npm run build:cjs & npm run build:esm",
 		"watch": "concurrently -k \"tsup ./src --watch --out-dir ./dist/cjs --shims --target esnext --sourcemap --format cjs\" \"tsc -w\""
 	},
 	"devDependencies": {
+		"@stylistic/eslint-plugin-ts": "^2.12.1",
 		"@thundercraft5/eslint-plugin": "file:.",
 		"@thundercraft5/tsconfig": "^2.0.0",
 		"@thundercraft5/type-utils": "^4.0.2",
-		"@types/node": "^22.10.2",
+		"@types/node": "^22.10.3",
 		"@typescript-eslint/eslint-plugin": "8.19.1-alpha.6",
 		"@typescript-eslint/parser": "8.19.1-alpha.6",
 		"@typescript-eslint/types": "^8.19.1-alpha.6",
@@ -66,11 +67,15 @@
 		"dist"
 	],
 	"dependencies": {
+		"@stylistic/eslint-plugin": "^2.12.1",
 		"dedent": "1.5.3",
 		"eslint-plugin-comments": "^1.0.0",
 		"eslint-plugin-mdx": "^3.1.5",
 		"eslint-plugin-node": "^11.1.0",
+		"eslint-plugin-perfectionist": "^4.5.0",
+		"eslint-plugin-promise": "^7.2.1",
 		"eslint-plugin-react": "^7.37.3",
+		"globals": "^15.14.0",
 		"tsutils": "^3.21.0"
 	}
 }

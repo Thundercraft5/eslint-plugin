@@ -3,17 +3,15 @@ import * as tsutils from "tsutils";
 import { AST_NODE_TYPES, ESLintUtils } from "@typescript-eslint/utils";
 
 
-import { createRule } from "../util";
+import { createRule } from "../util/index.ts";
 
 import type { Narrow, NarrowRest, ObjectEntries, Reconstruct } from "@thundercraft5/type-utils";
-
+	
 
 import type { ToNumber } from "@thundercraft5/type-utils/numbers";
 
 
-export const defaultOptions = [] as const;
-
-export default createRule({
+export const defaultOptions = [] as const;export default createRule({
 	name: "@thundercraft5/type-import-placement",
 	defaultOptions,
 	meta: {

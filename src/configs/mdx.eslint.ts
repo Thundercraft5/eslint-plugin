@@ -1,16 +1,19 @@
 import mdx from "eslint-plugin-mdx";
 
 export default {
+	"name": "mdx",
 	"files": [
-		"*.mdx"
+		"*.mdx",
 	],
 	"processor": "mdx/remark",
 	"plugins": {
-		mdx
+		mdx,
 	},
-	"parser": "eslint-mdx",
+	"languageOptions": {
+		"parser": "eslint-mdx",
+	},
 	"rules": {
 		"mdx/remark": "warn",
-		"no-unused-expressions": "error"
-	}
-};
+		"no-unused-expressions": "error",
+	},
+};	

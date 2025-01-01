@@ -1,10 +1,11 @@
-import importPlugin from "eslint-plugin-import"; // @ts-ignore
+import importPlugin from "eslint-plugin-import";
 
 export default {
+	"name": "plugin/import",
 	"files": [
-		"*/**.{js,ts,tsx,mts,cjs,mjs,cts}"
+		"*/**.{js,ts,tsx,mts,cjs,mjs,cts}",
 	],
-	"plugins": {
+	"plugins": {	
 		import: importPlugin,
 	},
 	"settings": {
@@ -16,45 +17,45 @@ export default {
 			".js",
 			".mjs",
 			".cjs",
-			".jsx"
-		]
+			".jsx",
+		],
 	},
 	"rules": {
 		"import/no-useless-path-segments": [
-			"warn"
+			"warn",
 		],
 		"import/no-named-as-default-member": [
-			"warn"
+			"warn",
 		],
 		"import/no-deprecated": [
-			"warn"
+			"warn",
 		],
 		"import/export": [
-			"warn"
+			"warn",
 		],
 		"import/no-unresolved": [
-			"error"
+			"error",
 		],
 		"import/default": [
-			"error"
+			"error",
 		],
 		"import/named": [
-			"error"
+			"error",
 		],
 		"import/namespace": [
-			"error"
+			"error",
 		],
 		"import/no-self-import": [
-			"error"
+			"error",
 		],
 		"import/first": [
-			"warn"
+			"warn",
 		],
 		"import/newline-after-import": [
-			"warn"
+			"warn",
 		],
 		"import/prefer-default-export": [
-			"warn"
+			"warn",
 		],
 		"import/no-anonymous-default-export": [
 			"warn",
@@ -65,8 +66,8 @@ export default {
 				"allowAnonymousFunction": true,
 				"allowCallExpression": true,
 				"allowLiteral": false,
-				"allowObject": true
-			}
+				"allowObject": true,
+			},
 		],
 		"import/order": [
 			"warn",
@@ -79,13 +80,13 @@ export default {
 					"sibling",
 					"index",
 					"object",
-					"type"
+					"type",
 				],
-				"newlines-between": "always-and-inside-groups"
-			}
+				"newlines-between": "always-and-inside-groups",
+			},
 		],
 		"import/no-duplicates": [
-			"error"
-		]
-	}
-}
+			"error",
+		],
+	},
+};

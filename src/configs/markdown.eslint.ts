@@ -1,18 +1,21 @@
-import markdown from "eslint-plugin-markdown"; // @ts-ignore
+import markdown from "eslint-plugin-markdown"; // @ts-expect-error
+
 export default [
 	{
+		"name": "markdown",
 		"files": [
-			"**/*.md"
+			"**/*.md",
 		],
 		"plugins": {
-			markdown
+			markdown,	
 		},
-		"processor": "markdown/markdown"
+		"processor": "markdown/markdown",
 	},
 	{
+		"name": "markdown/js",
 		"files": [
-			"**/*.md/*.js"
+			"**/*.md/*.js",
 		],
-		"rules": {}
-	}
-]
+		"rules": {},
+	},
+];

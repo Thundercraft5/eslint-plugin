@@ -1,14 +1,12 @@
-/* eslint-disable function-paren-newline */
+ 
 // import { ImportDefaultSpecifier, ImportSpecifier } from "@typescript-eslint/utils";
 import { AST_NODE_TYPES, ESLintUtils } from "@typescript-eslint/utils";
 import * as tsutils from "tsutils";
 import * as ts from "typescript";
 
-import { createRule } from "../util";
+import { createRule } from "../util/index.ts";	
 
-export const defaultOptions = [] as const;
-
-export default createRule({
+export const defaultOptions = [] as const;export default createRule({
 	name: "@thundercraft5/consistent-type-imports",
 	defaultOptions,
 	meta: {

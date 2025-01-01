@@ -1,9 +1,10 @@
-import unicorn from "eslint-plugin-unicorn"
+import unicorn from "eslint-plugin-unicorn";
 
 export default {
+	"name": "plugin/unicorn",
 	"files": [
-		"*/**.{js,ts,tsx,mts,cjs,mjs,cts}"
-	],
+		"*/**.{js,ts,tsx,mts,cjs,mjs,cts}",
+	],	
 	"plugins": {
 		unicorn,
 	},
@@ -15,156 +16,156 @@ export default {
 					"^[a-z][eE]rror\\d*$",
 					"^e(rr|xc?(eption)?)?$",
 					"^ignore$",
-					"^_$"
-				]
-			}
+					"^_$",
+				],
+			},
 		],
 		"unicorn/consistent-function-scoping": [
-			"warn"
+			"warn",
 		],
 		"unicorn/custom-error-definition": [
-			"warn"
+			"warn",
 		],
 		"unicorn/empty-brace-spaces": [
-			"warn"
+			"warn",
 		],
 		"unicorn/error-message": [
-			"warn"
+			"warn",
 		],
 		"unicorn/escape-case": [
-			"warn"
+			"warn",
 		],
 		"unicorn/explicit-length-check": [
-			"warn"
+			"warn",
 		],
 		"unicorn/filename-case": [
 			"warn",
 			{
 				"cases": {
 					"camelCase": true,
-					"pascalCase": true
-				}
-			}
+					"pascalCase": true,
+				},
+			},
 		],
 		"unicorn/new-for-builtins": [
-			"warn"
+			"warn",
 		],
 		"unicorn/no-array-push-push": [
-			"warn"
+			"warn",
 		],
 		"unicorn/no-for-loop": [
-			"warn"
+			"warn",
 		],
 		"unicorn/no-hex-escape": [
-			"warn"
+			"warn",
 		],
 		"unicorn/no-instanceof-array": [
-			"warn"
+			"warn",
 		],
 		"unicorn/no-useless-fallback-in-spread": [
-			"warn"
+			"warn",
 		],
 		"unicorn/no-object-as-default-parameter": [
-			"warn"
+			"warn",
 		],
 		"unicorn/no-useless-promise-resolve-reject": [
-			"warn"
+			"warn",
 		],
 		"unicorn/prefer-add-event-listener": [
-			"warn"
+			"warn",
 		],
 		"unicorn/prefer-array-index-of": [
-			"warn"
+			"warn",
 		],
 		"unicorn/prefer-array-some": [
-			"warn"
+			"warn",
 		],
 		"unicorn/prefer-negative-index": [
-			"warn"
+			"warn",
 		],
 		"unicorn/prefer-at": [
-			"warn"
+			"warn",
 		],
 		"unicorn/prefer-code-point": [
-			"warn"
+			"warn",
 		],
 		"unicorn/prefer-date-now": [
-			"warn"
+			"warn",
 		],
 		"unicorn/prefer-default-parameters": [
-			"warn"
+			"warn",
 		],
 		"unicorn/prefer-dom-node-append": [
-			"warn"
+			"warn",
 		],
 		"unicorn/prefer-dom-node-dataset": [
-			"warn"
+			"warn",
 		],
 		"unicorn/prefer-dom-node-remove": [
-			"warn"
+			"warn",
 		],
 		"unicorn/prefer-dom-node-text-content": [
-			"warn"
+			"warn",
 		],
 		"unicorn/prefer-includes": [
-			"warn"
+			"warn",
 		],
 		"unicorn/prefer-keyboard-event-key": [
-			"warn"
+			"warn",
 		],
 		"unicorn/prefer-modern-dom-apis": [
-			"warn"
+			"warn",
 		],
 		"unicorn/prefer-object-from-entries": [
-			"warn"
+			"warn",
 		],
 		"unicorn/prefer-optional-catch-binding": [
-			"warn"
+			"warn",
 		],
 		"unicorn/prefer-prototype-methods": [
-			"warn"
+			"warn",
 		],
 		"unicorn/prefer-query-selector": [
-			"warn"
+			"warn",
 		],
 		"unicorn/prefer-set-has": [
-			"warn"
+			"warn",
 		],
 		"unicorn/prefer-spread": [
-			"warn"
+			"warn",
 		],
 		"unicorn/prefer-string-replace-all": [
-			"warn"
+			"warn",
 		],
 		"unicorn/prefer-string-starts-ends-with": [
-			"warn"
+			"warn",
 		],
 		"unicorn/prefer-switch": [
-			"warn"
+			"warn",
 		],
 		"unicorn/prefer-ternary": [
-			"warn"
+			"warn",
 		],
 		"unicorn/prefer-top-level-await": [
-			"warn"
+			"warn",
 		],
 		"unicorn/prefer-type-error": [
-			"warn"
+			"warn",
 		],
 		"unicorn/prefer-string-slice": [
-			"warn"
+			"warn",
 		],
 		"unicorn/require-array-join-separator": [
-			"warn"
+			"warn",
 		],
 		"unicorn/require-number-to-fixed-digits-argument": [
-			"warn"
+			"warn",
 		],
 		"unicorn/throw-new-error": [
-			"warn"
+			"warn",
 		],
 		"unicorn/template-indent": [
-			"warn"
-		]
-	}
-}
+			"warn",
+		],
+	},
+};

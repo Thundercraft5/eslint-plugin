@@ -1,158 +1,161 @@
-import react from "eslint-plugin-react"
-import reactEsnextEslintrc from "./react-esnext.eslint.ts"
+import react from "eslint-plugin-react";
+import reactEsnextEslintrc from "./react-esnext.eslint.ts";
 
 export default [reactEsnextEslintrc, {
+	"name": "react",
 	"files": [
 		"**/*.{tsx,jsx}",
 	],
-	"plugins": {
-		react
+	"plugins": {	
+		react,
 	},
-	"parserOptions": {
-		"ecmaFeatures": {
-			"jsx": true
-		}
+	"languageOptions": {
+		"parserOptions": {
+			"ecmaFeatures": {
+				"jsx": true,
+			},
+		},
 	},
 	"rules": {
 		"react/jsx-indent": [
 			"warn",
-			"tab"
+			"tab",
 		],
 		"react/destructuring-assignment": [
-			"warn"
+			"warn",
 		],
 		"react/forbid-component-props": [
 			"warn",
 			{
-				"forbid": []
-			}
+				"forbid": [],
+			},
 		],
 		"react/forbid-dom-props": [
 			"warn",
 			{
-				"forbid": []
-			}
+				"forbid": [],
+			},
 		],
 		"react/forbid-elements": [
 			"warn",
 			{
-				"forbid": []
-			}
+				"forbid": [],
+			},
 		],
 		"react/function-component-definition": [
 			"warn",
 			{
 				"namedComponents": "arrow-function",
-				"unnamedComponents": "function-expression"
-			}
+				"unnamedComponents": "function-expression",
+			},
 		],
 		"react/hook-use-state": [
-			"warn"
+			"warn",
 		],
 		"react/no-access-state-in-setstate": [
-			"warn"
+			"warn",
 		],
 		"react/no-array-index-key": [
-			"warn"
+			"warn",
 		],
 		"react/no-arrow-function-lifecycle": [
-			"warn"
+			"warn",
 		],
 		"react/no-children-prop": [
-			"warn"
+			"warn",
 		],
 		"react/no-danger": [
-			"warn"
+			"warn",
 		],
 		"react/no-deprecated": [
-			"warn"
+			"warn",
 		],
 		"react/no-did-update-set-state": [
-			"warn"
+			"warn",
 		],
 		"react/no-did-mount-set-state": [
-			"warn"
+			"warn",
 		],
 		"react/no-direct-mutation-state": [
-			"warn"
+			"warn",
 		],
 		"react/no-invalid-html-attribute": [
-			"warn"
+			"warn",
 		],
 		"react/no-namespace": [
-			"warn"
+			"warn",
 		],
 		"react/no-this-in-sfc": [
-			"warn"
+			"warn",
 		],
 		"react/no-typos": [
-			"warn"
+			"warn",
 		],
 		"react/no-unescaped-entities": [
-			"warn"
+			"warn",
 		],
 		"react/no-unused-prop-types": [
-			"warn"
+			"warn",
 		],
 		"react/no-unused-state": [
-			"warn"
+			"warn",
 		],
 		"react/jsx-no-duplicate-props": [
-			"error"
+			"error",
 		],
 		"react/no-unknown-property": [
-			"warn"
+			"warn",
 		],
 		"react/require-optimization": [
-			"off"
+			"off",
 		],
 		"react/require-render-return": [
-			"error"
+			"error",
 		],
 		"react/void-dom-elements-no-children": [
-			"warn"
+			"warn",
 		],
 		"react/jsx-boolean-value": [
-			"warn"
+			"warn",
 		],
 		"react/self-closing-comp": [
-			"warn"
+			"warn",
 		],
 		"react/jsx-max-props-per-line": [
 			"warn",
 			{
 				"maximum": {
 					"single": 4,
-					"multi": 1
-				}
-			}
+					"multi": 1,
+				},
+			},
 		],
 		"react/jsx-newline": [
 			"warn",
 			{
-				"prevent": true
-			}
+				"prevent": true,
+			},
 		],
 		"react/jsx-no-comment-textnodes": [
-			"warn"
+			"warn",
 		],
 		"react/jsx-no-bind": [
-			"warn"
+			"warn",
 		],
 		"react/jsx-no-useless-fragment": [
-			"warn"
+			"warn",
 		],
 		"react/jsx-no-undef": [
-			"warn"
+			"warn",
 		],
 		"react/jsx-pascal-case": [
-			"warn"
+			"warn",
 		],
 		"react/jsx-props-no-multi-spaces": [
-			"warn"
+			"warn",
 		],
 		"react/jsx-sort-props": [
-			"warn"
+			"warn",
 		],
 		"react/jsx-tag-spacing": [
 			"warn",
@@ -160,20 +163,20 @@ export default [reactEsnextEslintrc, {
 				"closingSlash": "never",
 				"beforeSelfClosing": "always",
 				"beforeClosing": "never",
-				"afterOpening": "never"
-			}
+				"afterOpening": "never",
+			},
 		],
 		"react/jsx-curly-spacing": [
 			"warn",
 			{
 				"when": "always",
 				"children": {
-					"when": "always"
+					"when": "always",
 				},
 				"spacing": {
-					"objectLiterals": "never"
-				}
-			}
-		]
-	}
-}]
+					"objectLiterals": "never",
+				},
+			},
+		],
+	},
+}];

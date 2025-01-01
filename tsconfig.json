@@ -1,5 +1,5 @@
 {
-	"extends": "@thundercraft5/tsconfig/node-next.json",
+	"extends": "@thundercraft5/tsconfig/node-next.tsconfig.json",
 	"compilerOptions": {
 		"rootDir": "./src",
 		"baseUrl": "./src",

@@ -1,3 +1,3 @@
 import base from '@thundercraft5/eslint-plugin'
 
-export default base.configs.base
+export default base.configs.typescript

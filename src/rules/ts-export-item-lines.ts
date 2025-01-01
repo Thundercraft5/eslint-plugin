@@ -1,5 +1,5 @@
 import type { ReportFixFunction } from "@typescript-eslint/utils/ts-eslint";
-import { createRule } from "../util";
+import { createRule } from "../util/index.ts";
 
 
 
@@ -10,9 +10,7 @@ import type { ASTUtils, ESLintUtils } from "@typescript-eslint/utils";
 
 export const defaultOptions = [
 	2,
-] as const;
-
-export default createRule({
+] as const;	export default createRule({
 	defaultOptions,
 	name: "ts-export-item-lines",
 	meta: {
