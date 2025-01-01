@@ -1,4 +1,4 @@
-import * as configs from "./configs.ts";
+import * as configs from "./configs.js";
 
 const pluginConfig = {
 	configs: {

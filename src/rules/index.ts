@@ -13,4 +13,5 @@ export const rules = {
 	"no-ambiguous-type-only-imports": noAmbiguousTypeImports,
 };
 
+export default rules;
 export { importItemLines, noMultipleExports };
