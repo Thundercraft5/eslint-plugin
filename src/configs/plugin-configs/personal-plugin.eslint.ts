@@ -1,7 +1,7 @@
 import personalPlugin from "../../rules/index.ts";
 
-export default {
-	name: "plugin/thundercraft5",
+const base = {
+	name: "plugin/thundercraft5/js-rules",
 	files: [
 		"*/**.{js,ts,tsx,mts,cjs,mjs,cts}",
 	],
@@ -10,8 +10,16 @@ export default {
 	},
 	rules: {
 		"@thundercraft5/ts-export-item-lines": "off",
-		"@thundercraft5/no-ambiguous-type-only-imports": "warn",
-		"@thundercraft5/consistent-type-imports": "warn",
+		"@thundercraft5/consistent-type-imports": "off",
 		"@thundercraft5/no-multiple-exports": "off",
 	},
 };
+
+export default [base, {
+	...base,
+	"files": [
+		"*/**.{ts,tsx,mts,cts, mdx}",
+	],
+	"name": "plugin/thundercraft5/ts-rules",
+	"@thundercraft5/no-ambiguous-type-only-imports": "warn",
+}];

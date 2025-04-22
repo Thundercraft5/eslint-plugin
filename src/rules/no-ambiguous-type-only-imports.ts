@@ -1,11 +1,12 @@
 import * as ts from "typescript";
 import * as tsutils from "tsutils";
-import type { TSESTree } from "@typescript-eslint/utils";
-import { AST_NODE_TYPES, ESLintUtils } from "@typescript-eslint/utils";
+// import type { TSESTree } from "@typescript-eslint/utils";
+import { AST_NODE_TYPES, ESLintUtils, type TSESTree } from "@typescript-eslint/utils";
 
 import { createRule } from "../util/index.ts";
 
-export const defaultOptions = [] as const;export default createRule({
+export const defaultOptions = [] as const;
+export default createRule({
 	name: "@thundercraft5/no-ambiguous-type-only-imports",
 
 	defaultOptions,
@@ -31,7 +32,6 @@ export const defaultOptions = [] as const;export default createRule({
 					name = originalNode.name.getText(),
 					{ declarations } = checker.getAliasedSymbol(importSymbol!);
 
-				checker.getTypeOfSymbolAtLocation;
 				if (
 					node.importKind === "value" // Import specifier is a value import (in source)
 					&& (node.parent as TSESTree.ImportDeclaration).importKind === "value" // Import declaration is a value import
