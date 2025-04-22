@@ -11,12 +11,27 @@ importers:
       '@stylistic/eslint-plugin':
         specifier: ^2.12.1
         version: 2.12.1(eslint@9.17.0)(typescript@5.8.0-dev.20241231)
+      '@stylistic/eslint-plugin-ts':
+        specifier: ^2.12.1
+        version: 2.12.1(eslint@9.17.0)(typescript@5.8.0-dev.20241231)
       dedent:
         specifier: 1.5.3
         version: 1.5.3
+      eslint-import-resolver-typescript:
+        specifier: 3.7.0
+        version: 3.7.0(eslint-plugin-import@2.31.0)(eslint@9.17.0)
       eslint-plugin-comments:
         specifier: ^1.0.0
         version: 1.0.0(eslint@9.17.0)
+      eslint-plugin-import:
+        specifier: 2.31.0
+        version: 2.31.0(@typescript-eslint/parser@8.19.1-alpha.6(eslint@9.17.0)(typescript@5.8.0-dev.20241231))(eslint-import-resolver-typescript@3.7.0)(eslint@9.17.0)
+      eslint-plugin-import-newlines:
+        specifier: 1.4.0
+        version: 1.4.0(eslint@9.17.0)
+      eslint-plugin-markdown:
+        specifier: 5.1.0
+        version: 5.1.0(eslint@9.17.0)
       eslint-plugin-mdx:
         specifier: ^3.1.5
         version: 3.1.5(eslint@9.17.0)
@@ -32,6 +47,21 @@ importers:
       eslint-plugin-react:
         specifier: ^7.37.3
         version: 7.37.3(eslint@9.17.0)
+      eslint-plugin-regexp:
+        specifier: 2.7.0
+        version: 2.7.0(eslint@9.17.0)
+      eslint-plugin-simple-import-sort:
+        specifier: 12.1.1
+        version: 12.1.1(eslint@9.17.0)
+      eslint-plugin-sort-export-all:
+        specifier: 1.4.1
+        version: 1.4.1(eslint@9.17.0)
+      eslint-plugin-sort-exports:
+        specifier: 0.9.1
+        version: 0.9.1(eslint@9.17.0)
+      eslint-plugin-unicorn:
+        specifier: 56.0.1
+        version: 56.0.1(eslint@9.17.0)
       globals:
         specifier: ^15.14.0
         version: 15.14.0
@@ -39,12 +69,9 @@ importers:
         specifier: ^3.21.0
         version: 3.21.0(typescript@5.8.0-dev.20241231)
     devDependencies:
-      '@stylistic/eslint-plugin-ts':
-        specifier: ^2.12.1
-        version: 2.12.1(eslint@9.17.0)(typescript@5.8.0-dev.20241231)
       '@thundercraft5/eslint-plugin':
         specifier: file:.
-        version: file:(eslint@9.17.0)(typescript@5.8.0-dev.20241231)
+        version: file:(@typescript-eslint/parser@8.19.1-alpha.6(eslint@9.17.0)(typescript@5.8.0-dev.20241231))(eslint@9.17.0)(typescript@5.8.0-dev.20241231)
       '@thundercraft5/tsconfig':
         specifier: ^2.0.0
         version: 2.0.0
@@ -72,33 +99,6 @@ importers:
       eslint:
         specifier: 9.17.0
         version: 9.17.0
-      eslint-import-resolver-typescript:
-        specifier: 3.7.0
-        version: 3.7.0(eslint-plugin-import@2.31.0)(eslint@9.17.0)
-      eslint-plugin-import:
-        specifier: 2.31.0
-        version: 2.31.0(@typescript-eslint/parser@8.19.1-alpha.6(eslint@9.17.0)(typescript@5.8.0-dev.20241231))(eslint-import-resolver-typescript@3.7.0)(eslint@9.17.0)
-      eslint-plugin-import-newlines:
-        specifier: 1.4.0
-        version: 1.4.0(eslint@9.17.0)
-      eslint-plugin-markdown:
-        specifier: 5.1.0
-        version: 5.1.0(eslint@9.17.0)
-      eslint-plugin-regexp:
-        specifier: 2.7.0
-        version: 2.7.0(eslint@9.17.0)
-      eslint-plugin-simple-import-sort:
-        specifier: 12.1.1
-        version: 12.1.1(eslint@9.17.0)
-      eslint-plugin-sort-export-all:
-        specifier: 1.4.1
-        version: 1.4.1(eslint@9.17.0)
-      eslint-plugin-sort-exports:
-        specifier: 0.9.1
-        version: 0.9.1(eslint@9.17.0)
-      eslint-plugin-unicorn:
-        specifier: 56.0.1
-        version: 56.0.1(eslint@9.17.0)
       ts-node:
         specifier: 11.0.0-beta.1
         version: 11.0.0-beta.1(@types/node@22.10.3)(typescript@5.8.0-dev.20241231)
@@ -3198,22 +3198,35 @@ snapshots:
       - supports-color
       - typescript
 
-  '@thundercraft5/eslint-plugin@file:(eslint@9.17.0)(typescript@5.8.0-dev.20241231)':
+  '@thundercraft5/eslint-plugin@file:(@typescript-eslint/parser@8.19.1-alpha.6(eslint@9.17.0)(typescript@5.8.0-dev.20241231))(eslint@9.17.0)(typescript@5.8.0-dev.20241231)':
     dependencies:
       '@stylistic/eslint-plugin': 2.12.1(eslint@9.17.0)(typescript@5.8.0-dev.20241231)
+      '@stylistic/eslint-plugin-ts': 2.12.1(eslint@9.17.0)(typescript@5.8.0-dev.20241231)
       dedent: 1.5.3
       eslint: 9.17.0
+      eslint-import-resolver-typescript: 3.7.0(eslint-plugin-import@2.31.0)(eslint@9.17.0)
       eslint-plugin-comments: 1.0.0(eslint@9.17.0)
+      eslint-plugin-import: 2.31.0(@typescript-eslint/parser@8.19.1-alpha.6(eslint@9.17.0)(typescript@5.8.0-dev.20241231))(eslint-import-resolver-typescript@3.7.0)(eslint@9.17.0)
+      eslint-plugin-import-newlines: 1.4.0(eslint@9.17.0)
+      eslint-plugin-markdown: 5.1.0(eslint@9.17.0)
       eslint-plugin-mdx: 3.1.5(eslint@9.17.0)
       eslint-plugin-node: 11.1.0(eslint@9.17.0)
       eslint-plugin-perfectionist: 4.5.0(eslint@9.17.0)(typescript@5.8.0-dev.20241231)
       eslint-plugin-promise: 7.2.1(eslint@9.17.0)
       eslint-plugin-react: 7.37.3(eslint@9.17.0)
+      eslint-plugin-regexp: 2.7.0(eslint@9.17.0)
+      eslint-plugin-simple-import-sort: 12.1.1(eslint@9.17.0)
+      eslint-plugin-sort-export-all: 1.4.1(eslint@9.17.0)
+      eslint-plugin-sort-exports: 0.9.1(eslint@9.17.0)
+      eslint-plugin-unicorn: 56.0.1(eslint@9.17.0)
       globals: 15.14.0
       tsutils: 3.21.0(typescript@5.8.0-dev.20241231)
     transitivePeerDependencies:
+      - '@typescript-eslint/parser'
       - babel-plugin-macros
       - bluebird
+      - eslint-import-resolver-webpack
+      - eslint-plugin-import-x
       - supports-color
       - typescript
 
