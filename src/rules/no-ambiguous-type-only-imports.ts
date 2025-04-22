@@ -2,12 +2,12 @@ import * as ts from "typescript";
 import * as tsutils from "tsutils";
 import type { TSESTree } from "@typescript-eslint/utils";
 import { AST_NODE_TYPES, ESLintUtils } from "@typescript-eslint/utils";
-	
+
 import { createRule } from "../util/index.ts";
 
 export const defaultOptions = [] as const;export default createRule({
 	name: "@thundercraft5/no-ambiguous-type-only-imports",
-	
+
 	defaultOptions,
 	meta: {
 		fixable: "code",
@@ -36,7 +36,7 @@ export const defaultOptions = [] as const;export default createRule({
 					node.importKind === "value" // Import specifier is a value import (in source)
 					&& (node.parent as TSESTree.ImportDeclaration).importKind === "value" // Import declaration is a value import
 					&& importSymbol?.declarations?.every(d => (d.kind & ts.SyntaxKind.InterfaceKeyword) === ts.SyntaxKind.InterfaceKeyword
-						|| (d.kind & ts.SyntaxKind.TypeAliasDeclaration) === ts.SyntaxKind.TypeAliasDeclaration) // Symbol is a type alias/interface
+					  || (d.kind & ts.SyntaxKind.TypeAliasDeclaration) === ts.SyntaxKind.TypeAliasDeclaration) // Symbol is a type alias/interface
 				) context.report({
 					messageId: "ambiguousTypeImport",
 					loc: node.loc,

@@ -1,14 +1,14 @@
 import perfectionist from "eslint-plugin-perfectionist";
 
-const k = { 
+const k = {
 	name: "plugin/perfectionist",
-	plugins: { 
+	plugins: {
 		perfectionist,
 	},
-	"rules": {
+	rules: {
 		"perfectionist/sort-intersection-types": ["warn"],
 		"perfectionist/sort-union-types": ["warn"],
 	},
-};   
+};
 
 export default perfectionist.configs["recommended-natural"];

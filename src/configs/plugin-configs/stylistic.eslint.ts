@@ -1,15 +1,15 @@
 import stylistic from "@stylistic/eslint-plugin";
 
 export default {
-	"name": "plugin/stylistic",
-	"plugins": {
+	name: "plugin/stylistic",
+	plugins: {
 		"@stylistic": stylistic,
 	},
-	"rules": {
+	rules: {
 		"@stylistic/curly-newline": ["warn", {
-			"minElements": 2,
-			"multiline": true,
-			"consistent": true,
+			minElements: 2,
+			multiline: true,
+			consistent: true,
 		}],
 		"@stylistic/indent-binary-ops": ["warn"],
 		"@stylistic/type-generic-spacing": ["warn"],
@@ -24,16 +24,16 @@ export default {
 			ternaryOperandBinaryExpressions: false,
 			enforceForNewInMemberExpressions: false,
 			enforceForFunctionPrototypeMethods: false,
-		}], 
-		"@stylistic/no-confusing-arrow": ["warn", { allowParens:true }], 
-		"@stylistic/function-call-spacing": ["warn", "never"], 
-		"@stylistic/eol-last": ["warn", "always"],  
-		"@stylistic/arrow-spacing": ["warn"], 
-		"@stylistic/arrow-parens": ["warn", "as-needed"], 
-		"@stylistic/array-element-newline": ["warn", "consistent"], 
-		"@stylistic/array-bracket-spacing": ["warn", "never", { 
+		}],
+		"@stylistic/no-confusing-arrow": ["warn", { allowParens:true }],
+		"@stylistic/function-call-spacing": ["warn", "never"],
+		"@stylistic/eol-last": ["warn", "always"],
+		"@stylistic/arrow-spacing": ["warn"],
+		"@stylistic/arrow-parens": ["warn", "as-needed"],
+		"@stylistic/array-element-newline": ["warn", "consistent"],
+		"@stylistic/array-bracket-spacing": ["warn", "never", {
 			singleValue: false,
-			
+
 		}],
 		"@stylistic/array-bracket-newline": ["warn", "consistent"],
 		"@stylistic/multiline-comment-style": ["warn", "starred-block"],
@@ -57,7 +57,7 @@ export default {
 			"warn",
 			"1tbs",
 			{
-				"allowSingleLine": true,
+				allowSingleLine: true,
 			},
 		],
 		"@stylistic/func-call-spacing": [
@@ -66,12 +66,12 @@ export default {
 		"@stylistic/indent": [
 			"warn",
 			"tab",
-			{ 
-				"MemberExpression": "off",
-				"SwitchCase": 1,
-				"flatTernaryExpressions": true,
-				"offsetTernaryExpressions": false,
-				"ImportDeclaration": 1,
+			{
+				MemberExpression: "off",
+				SwitchCase: 1,
+				flatTernaryExpressions: true,
+				offsetTernaryExpressions: false,
+				ImportDeclaration: 1,
 			},
 		],
 		"@stylistic/semi": [
@@ -80,8 +80,8 @@ export default {
 		"@stylistic/comma-spacing": [
 			"warn",
 			{
-				"after": true,
-				"before": false,
+				after: true,
+				before: false,
 			},
 		],
 		"@stylistic/comma-dangle": [
@@ -91,18 +91,18 @@ export default {
 		"@stylistic/keyword-spacing": [
 			"warn",
 			{
-				"before": true,
+				before: true,
 			},
 		],
 		"@stylistic/type-annotation-spacing": [
 			"warn",
 			{
-				"before": false,
-				"after": true,
-				"overrides": {
-					"arrow": {
-						"before": true,
-						"after": true,
+				before: false,
+				after: true,
+				overrides: {
+					arrow: {
+						before: true,
+						after: true,
 					},
 				},
 			},
@@ -110,23 +110,23 @@ export default {
 		"@stylistic/member-delimiter-style": [
 			"warn",
 			{
-				"multiline": {
-					"delimiter": "semi",
-					"requireLast": true,
+				multiline: {
+					delimiter: "semi",
+					requireLast: true,
 				},
-				"singleline": {
-					"delimiter": "semi",
-					"requireLast": false,
+				singleline: {
+					delimiter: "semi",
+					requireLast: false,
 				},
-				"multilineDetection": "brackets",
+				multilineDetection: "brackets",
 			},
 		],
 		"@stylistic/lines-between-class-members": [
 			"warn",
 			"always",
 			{
-				"exceptAfterSingleLine": true,
-				"exceptAfterOverload": true,
+				exceptAfterSingleLine: true,
+				exceptAfterOverload: true,
 			},
 		],
 		"@stylistic/space-before-function-paren": [
@@ -146,43 +146,43 @@ export default {
 			"warn",
 			"double",
 			{
-				"avoidEscape": true,
-				"allowTemplateLiterals": true,
+				avoidEscape: true,
+				allowTemplateLiterals: true,
 			},
 		],
 		"@stylistic/padding-line-between-statements": [
 			"warn",
 			{
-				"blankLine": "always",
-				"prev": "*",
-				"next": "return",
+				blankLine: "always",
+				prev: "*",
+				next: "return",
 			},
 			{
-				"blankLine": "always",
-				"prev": "*",
-				"next": "multiline-block-like",
+				blankLine: "always",
+				prev: "*",
+				next: "multiline-block-like",
 			},
 			{
-				"blankLine": "always",
-				"prev": "multiline-block-like",
-				"next": "*",
+				blankLine: "always",
+				prev: "multiline-block-like",
+				next: "*",
 			},
 			{
-				"blankLine": "always",
-				"prev": [
+				blankLine: "always",
+				prev: [
 					"function",
 					"class",
 				],
-				"next": "*",
+				next: "*",
 			},
 			{
-				"blankLine": "always",
-				"prev": [
+				blankLine: "always",
+				prev: [
 					"const",
 					"let",
 					"var",
 				],
-				"next": [
+				next: [
 					"block",
 					"block-like",
 					"break",
@@ -214,71 +214,71 @@ export default {
 				],
 			},
 			{
-				"blankLine": "never",
-				"prev": [
+				blankLine: "never",
+				prev: [
 					"const",
 					"let",
 					"var",
 				],
-				"next": [
+				next: [
 					"const",
 					"let",
 					"var",
 				],
 			},
 			{
-				"blankLine": "never",
-				"prev": "*",
-				"next": "directive",
+				blankLine: "never",
+				prev: "*",
+				next: "directive",
 			},
 			{
-				"blankLine": "always",
-				"prev": "directive",
-				"next": "*",
+				blankLine: "always",
+				prev: "directive",
+				next: "*",
 			},
 			{
-				"blankLine": "any",
-				"prev": "directive",
-				"next": "directive",
+				blankLine: "any",
+				prev: "directive",
+				next: "directive",
 			},
 			{
-				"blankLine": "always",
-				"prev": "*",
-				"next": "export",
+				blankLine: "always",
+				prev: "*",
+				next: "export",
 			},
 			{
-				"blankLine": "always",
-				"prev": "export",
-				"next": "*",
+				blankLine: "always",
+				prev: "export",
+				next: "*",
 			},
 			{
-				"blankLine": "never",
-				"prev": "export",
-				"next": "export",
+				blankLine: "never",
+				prev: "export",
+				next: "export",
 			},
 			{
-				"blankLine": "always",
-				"prev": [
+				blankLine: "always",
+				prev: [
 					"require",
 					"import",
 				],
-				"next": "*",
+				next: "*",
 			},
 			{
-				"blankLine": "any",
-				"prev": [
+				blankLine: "any",
+				prev: [
 					"require",
 					"import",
 				],
-				"next": [
+				next: [
 					"require",
 					"import",
 				],
 			},
 			{
-				"blankLine": "always",
-				"prev": "*",
-				"next": [
+				blankLine: "always",
+				prev: "*",
+				next: [
 					"class",
 					"function",
 				],
@@ -287,8 +287,8 @@ export default {
 		"@stylistic/space-infix-ops": [
 			"warn",
 			{
-				"int32Hint": false,
+				int32Hint: false,
 			},
 		],
 	}, //satisfies typeof stylistic.rules,
-};	
+};

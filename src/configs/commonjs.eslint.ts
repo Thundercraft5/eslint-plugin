@@ -1,21 +1,21 @@
 export default {
-	"name": "commonjs",
-	"files": [
+	name: "commonjs",
+	files: [
 		"*.cjs",
 		"*.cts",
-	],	
-	"parserOptions": {
-		"sourceType": "script",
+	],
+	parserOptions: {
+		sourceType: "script",
 	},
-	"env": {
-		"commonjs": true,
+	env: {
+		commonjs: true,
 	},
-	"globals": {
-		"module": "readonly",
-		"exports": "readonly",
-		"require": "readonly",
-		"__filename": "readonly",
-		"__dirname": "readonly",
+	globals: {
+		module: "readonly",
+		exports: "readonly",
+		require: "readonly",
+		__filename: "readonly",
+		__dirname: "readonly",
 	},
 };
 

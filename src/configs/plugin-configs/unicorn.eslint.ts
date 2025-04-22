@@ -1,18 +1,18 @@
 import unicorn from "eslint-plugin-unicorn";
 
 export default {
-	"name": "plugin/unicorn",
-	"files": [
+	name: "plugin/unicorn",
+	files: [
 		"*/**.{js,ts,tsx,mts,cjs,mjs,cts}",
-	],	
-	"plugins": {
+	],
+	plugins: {
 		unicorn,
 	},
-	"rules": {
+	rules: {
 		"unicorn/catch-error-name": [
 			"warn",
 			{
-				"ignore": [
+				ignore: [
 					"^[a-z][eE]rror\\d*$",
 					"^e(rr|xc?(eption)?)?$",
 					"^ignore$",
@@ -41,9 +41,9 @@ export default {
 		"unicorn/filename-case": [
 			"warn",
 			{
-				"cases": {
-					"camelCase": true,
-					"pascalCase": true,
+				cases: {
+					camelCase: true,
+					pascalCase: true,
 				},
 			},
 		],

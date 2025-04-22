@@ -6,7 +6,7 @@ import { AST_NODE_TYPES, ESLintUtils } from "@typescript-eslint/utils";
 import { createRule } from "../util/index.ts";
 
 import type { Narrow, NarrowRest, ObjectEntries, Reconstruct } from "@thundercraft5/type-utils";
-	
+
 
 import type { ToNumber } from "@thundercraft5/type-utils/numbers";
 

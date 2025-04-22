@@ -1,14 +1,14 @@
 import importPlugin from "eslint-plugin-import";
 
 export default {
-	"name": "plugin/import",
-	"files": [
+	name: "plugin/import",
+	files: [
 		"*/**.{js,ts,tsx,mts,cjs,mjs,cts}",
 	],
-	"plugins": {	
+	plugins: {
 		import: importPlugin,
 	},
-	"settings": {
+	settings: {
 		"import/extensions": [
 			".ts",
 			".cts",
@@ -20,7 +20,7 @@ export default {
 			".jsx",
 		],
 	},
-	"rules": {
+	rules: {
 		"import/no-useless-path-segments": [
 			"warn",
 		],
@@ -60,13 +60,13 @@ export default {
 		"import/no-anonymous-default-export": [
 			"warn",
 			{
-				"allowArray": true,
-				"allowArrowFunction": true,
-				"allowAnonymousClass": false,
-				"allowAnonymousFunction": true,
-				"allowCallExpression": true,
-				"allowLiteral": false,
-				"allowObject": true,
+				allowArray: true,
+				allowArrowFunction: true,
+				allowAnonymousClass: false,
+				allowAnonymousFunction: true,
+				allowCallExpression: true,
+				allowLiteral: false,
+				allowObject: true,
 			},
 		],
 		"import/order": [

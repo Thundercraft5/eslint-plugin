@@ -1,14 +1,14 @@
 import regexp from "eslint-plugin-regexp";
 
 export default {
-	"name": "plugin/regexp",
-	"files": [	
+	name: "plugin/regexp",
+	files: [
 		"*/**.{js,ts,tsx,mts,cjs,mjs,cts}",
 	],
-	"plugins": {
+	plugins: {
 		regexp,
 	},
-	"rules": {
+	rules: {
 		"regexp/no-empty-alternative": [
 			"warn",
 		],
@@ -27,7 +27,7 @@ export default {
 		"regexp/no-lazy-ends": [
 			"warn",
 			{
-				"ignorePartial": true,
+				ignorePartial: true,
 			},
 		],
 		"regexp/no-useless-assertions": [
@@ -123,11 +123,11 @@ export default {
 		"regexp/letter-case": [
 			"warn",
 			{
-				"caseInsensitive": "lowercase",
-				"unicodeEscape": "uppercase",
-				"hexadecimalEscape": "uppercase",
-				"controlEscape": "uppercase",
+				caseInsensitive: "lowercase",
+				unicodeEscape: "uppercase",
+				hexadecimalEscape: "uppercase",
+				controlEscape: "uppercase",
 			},
 		],
 	},
-};		
+};

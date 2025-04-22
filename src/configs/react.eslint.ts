@@ -2,21 +2,21 @@ import react from "eslint-plugin-react";
 import reactEsnextEslintrc from "./react-esnext.eslint.ts";
 
 export default [reactEsnextEslintrc, {
-	"name": "react",
-	"files": [
+	name: "react",
+	files: [
 		"**/*.{tsx,jsx}",
 	],
-	"plugins": {	
+	plugins: {
 		react,
 	},
-	"languageOptions": {
-		"parserOptions": {
-			"ecmaFeatures": {
-				"jsx": true,
+	languageOptions: {
+		parserOptions: {
+			ecmaFeatures: {
+				jsx: true,
 			},
 		},
 	},
-	"rules": {
+	rules: {
 		"react/jsx-indent": [
 			"warn",
 			"tab",
@@ -27,26 +27,26 @@ export default [reactEsnextEslintrc, {
 		"react/forbid-component-props": [
 			"warn",
 			{
-				"forbid": [],
+				forbid: [],
 			},
 		],
 		"react/forbid-dom-props": [
 			"warn",
 			{
-				"forbid": [],
+				forbid: [],
 			},
 		],
 		"react/forbid-elements": [
 			"warn",
 			{
-				"forbid": [],
+				forbid: [],
 			},
 		],
 		"react/function-component-definition": [
 			"warn",
 			{
-				"namedComponents": "arrow-function",
-				"unnamedComponents": "function-expression",
+				namedComponents: "arrow-function",
+				unnamedComponents: "function-expression",
 			},
 		],
 		"react/hook-use-state": [
@@ -124,16 +124,16 @@ export default [reactEsnextEslintrc, {
 		"react/jsx-max-props-per-line": [
 			"warn",
 			{
-				"maximum": {
-					"single": 4,
-					"multi": 1,
+				maximum: {
+					single: 4,
+					multi: 1,
 				},
 			},
 		],
 		"react/jsx-newline": [
 			"warn",
 			{
-				"prevent": true,
+				prevent: true,
 			},
 		],
 		"react/jsx-no-comment-textnodes": [
@@ -160,21 +160,21 @@ export default [reactEsnextEslintrc, {
 		"react/jsx-tag-spacing": [
 			"warn",
 			{
-				"closingSlash": "never",
-				"beforeSelfClosing": "always",
-				"beforeClosing": "never",
-				"afterOpening": "never",
+				closingSlash: "never",
+				beforeSelfClosing: "always",
+				beforeClosing: "never",
+				afterOpening: "never",
 			},
 		],
 		"react/jsx-curly-spacing": [
 			"warn",
 			{
-				"when": "always",
-				"children": {
-					"when": "always",
+				when: "always",
+				children: {
+					when: "always",
 				},
-				"spacing": {
-					"objectLiterals": "never",
+				spacing: {
+					objectLiterals: "never",
 				},
 			},
 		],

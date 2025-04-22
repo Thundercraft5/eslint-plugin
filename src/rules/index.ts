@@ -1,4 +1,3 @@
-
 import consistentTypeImports from "./consistent-type-imports.ts";
 import noAmbiguousTypeImports from "./no-ambiguous-type-only-imports.ts";
 import noMultipleExports from "./no-multiple-exports.ts";

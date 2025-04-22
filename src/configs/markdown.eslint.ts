@@ -1,21 +1,21 @@
-import markdown from "eslint-plugin-markdown"; 
+import markdown from "eslint-plugin-markdown";
 
 export default [
 	{
-		"name": "markdown",
-		"files": [
+		name: "markdown",
+		files: [
 			"**/*.md",
 		],
-		"plugins": {
-			markdown,	
+		plugins: {
+			markdown,
 		},
-		"processor": "markdown/markdown",
+		processor: "markdown/markdown",
 	},
 	{
-		"name": "markdown/js",
-		"files": [
+		name: "markdown/js",
+		files: [
 			"**/*.md/*.js",
 		],
-		"rules": {},
+		rules: {},
 	},
 ];

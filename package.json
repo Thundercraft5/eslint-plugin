@@ -40,8 +40,6 @@
 		"@thundercraft5/tsconfig": "^2.0.0",
 		"@thundercraft5/type-utils": "^4.0.2",
 		"@types/node": "^22.10.3",
-		"@typescript-eslint/eslint-plugin": "8.19.1-alpha.6",
-		"@typescript-eslint/parser": "8.19.1-alpha.6",
 		"@typescript-eslint/types": "^8.19.1-alpha.6",
 		"copyfiles": "2.4.1",
 		"del-cli": "6.0.0",
@@ -76,6 +74,8 @@
 		"@stylistic/eslint-plugin-ts": "^2.12.1",
 		"eslint": "9.17.0",
 		"globals": "^15.14.0",
-		"tsutils": "^3.21.0"
+		"tsutils": "^3.21.0",
+		"@typescript-eslint/eslint-plugin": "8.19.1-alpha.6",
+		"@typescript-eslint/parser": "8.19.1-alpha.6"
 	}
 }

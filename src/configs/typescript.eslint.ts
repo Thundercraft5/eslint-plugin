@@ -3,16 +3,16 @@ import typescriptEslintParser from "@typescript-eslint/parser";
 
 import modulesConfig from "./modules.eslint.ts";
 import esnextEslint from "./esnext.eslint.ts";
-	
+
 export default [modulesConfig, ...esnextEslint, {
-	"name": "typescript",
-	"files": [
+	name: "typescript",
+	files: [
 		"**/*.ts",
 	],
-	"plugins": {
+	plugins: {
 		"@typescript-eslint": typescriptEslint,
 	},
-	"settings": {
+	settings: {
 		"import/extensions": [
 			".ts",
 			".cts",
@@ -36,29 +36,29 @@ export default [modulesConfig, ...esnextEslint, {
 			],
 		},
 		"import/resolver": {
-			"node": {
-				"extensions": [
+			node: {
+				extensions: [
 					".ts",
 					".tsx",
 					".js",
 					".jsx",
 				],
 			},
-			"typescript": {
-				"project": "**/tsconfig.json",
+			typescript: {
+				project: "**/tsconfig.json",
 			},
 		},
 	},
-	"languageOptions": {
-		"parserOptions": {
-			"sourceType": "module",
-			"project": "**/tsconfig.json",
+	languageOptions: {
+		parserOptions: {
+			sourceType: "module",
+			project: "**/tsconfig.json",
 		},
-		"parser": typescriptEslintParser,
+		parser: typescriptEslintParser,
 	},
 
 
-	"rules": {
+	rules: {
 		"brace-style": "off",
 		"comma-dangle": "off",
 		"comma-spacing": "off",
@@ -129,8 +129,8 @@ export default [modulesConfig, ...esnextEslint, {
 		"@typescript-eslint/array-type": [
 			"warn",
 			{
-				"default": "array",
-				"readonly": "array",
+				default: "array",
+				readonly: "array",
 			},
 		],
 		"@typescript-eslint/no-redundant-type-constituents": [
@@ -154,9 +154,9 @@ export default [modulesConfig, ...esnextEslint, {
 		"@typescript-eslint/no-misused-promises": [
 			"error",
 			{
-				"checksConditionals": true,
-				"checksVoidReturn": true,
-				"checksSpreads": true,
+				checksConditionals: true,
+				checksVoidReturn: true,
+				checksSpreads: true,
 			},
 		],
 		"@typescript-eslint/no-namespace": [
@@ -234,9 +234,9 @@ export default [modulesConfig, ...esnextEslint, {
 		"@typescript-eslint/triple-slash-reference": [
 			"warn",
 			{
-				"lib": "always",
-				"path": "never",
-				"types": "prefer-import",
+				lib: "always",
+				path: "never",
+				types: "prefer-import",
 			},
 		],
 		"@typescript-eslint/prefer-ts-expect-error": [
@@ -251,7 +251,7 @@ export default [modulesConfig, ...esnextEslint, {
 		"@typescript-eslint/naming-convention": [
 			"warn",
 			{
-				"selector": [
+				selector: [
 					"classProperty",
 					"objectLiteralProperty",
 					"typeProperty",
@@ -261,13 +261,13 @@ export default [modulesConfig, ...esnextEslint, {
 					"accessor",
 					"enumMember",
 				],
-				"format": null,
-				"modifiers": [
+				format: null,
+				modifiers: [
 					"requiresQuotes",
 				],
 			},
 			{
-				"selector": [
+				selector: [
 					"classProperty",
 					"objectLiteralProperty",
 					"typeProperty",
@@ -277,58 +277,58 @@ export default [modulesConfig, ...esnextEslint, {
 					"accessor",
 					"enumMember",
 				],
-				"format": [
+				format: [
 					"UPPER_CASE",
 					"camelCase",
 					"PascalCase",
 				],
 			},
 			{
-				"selector": "variable",
-				"types": [
+				selector: "variable",
+				types: [
 					"boolean",
 					"number",
 					"string",
 				],
-				"format": [
+				format: [
 					"UPPER_CASE",
 				],
-				"modifiers": [
+				modifiers: [
 					"const",
 					"global",
 				],
 			},
 			{
-				"selector": [
+				selector: [
 					"classProperty",
 					"variable",
 				],
-				"format": [
+				format: [
 					"camelCase",
 					"PascalCase",
 					"UPPER_CASE",
 				],
-				"leadingUnderscore": "allowSingleOrDouble",
-				"trailingUnderscore": "forbid",
+				leadingUnderscore: "allowSingleOrDouble",
+				trailingUnderscore: "forbid",
 			},
 			{
-				"selector": [
+				selector: [
 					"typeLike",
 				],
-				"format": [
+				format: [
 					"PascalCase",
 				],
 			},
 			{
-				"selector": [
+				selector: [
 					"default",
 				],
-				"format": [
+				format: [
 					"camelCase",
 					"PascalCase",
 				],
-				"leadingUnderscore": "allowSingleOrDouble",
-				"trailingUnderscore": "forbid",
+				leadingUnderscore: "allowSingleOrDouble",
+				trailingUnderscore: "forbid",
 			},
 		],
 		"@typescript-eslint/switch-exhaustiveness-check": "warn",
@@ -343,8 +343,8 @@ export default [modulesConfig, ...esnextEslint, {
 		"@typescript-eslint/consistent-type-assertions": [
 			"warn",
 			{
-				"assertionStyle": "as",
-				"objectLiteralTypeAssertions": "allow",
+				assertionStyle: "as",
+				objectLiteralTypeAssertions: "allow",
 			},
 		],
 		"@typescript-eslint/consistent-type-definitions": [
@@ -354,19 +354,19 @@ export default [modulesConfig, ...esnextEslint, {
 		"@typescript-eslint/consistent-type-exports": [
 			"warn",
 			{
-				"fixMixedExportsWithInlineTypeSpecifier": true,
+				fixMixedExportsWithInlineTypeSpecifier: true,
 			},
 		],
 		"@typescript-eslint/consistent-type-imports": [
 			"warn",
 			{
-				"prefer": "type-imports",
+				prefer: "type-imports",
 			},
 		],
 		"@typescript-eslint/no-restricted-types": [
 			"warn",
 			{
-				"types": {},
+				types: {},
 			},
 		],
 		"@typescript-eslint/ban-ts-comment": [
@@ -382,183 +382,183 @@ export default [modulesConfig, ...esnextEslint, {
 		"@typescript-eslint/dot-notation": [
 			"warn",
 			{
-				"allowKeywords": true,
-				"allowPattern": "",
+				allowKeywords: true,
+				allowPattern: "",
 			},
 		],
 
-		
+
 		"@typescript-eslint/member-ordering": [
 			"warn",
 			{
-				"default": [
+				default: [
 					// Index signature
 					"signature",
 					"call-signature",
-			
+
 					// Fields
 					"public-static-field",
 					"protected-static-field",
 					"private-static-field",
 					"#private-static-field",
-			
+
 					"public-decorated-field",
 					"protected-decorated-field",
 					"private-decorated-field",
-			
+
 					"public-instance-field",
 					"protected-instance-field",
 					"private-instance-field",
 					"#private-instance-field",
-			
+
 					"public-abstract-field",
 					"protected-abstract-field",
-			
+
 					"public-field",
 					"protected-field",
 					"private-field",
 					"#private-field",
-			
+
 					"static-field",
 					"instance-field",
 					"abstract-field",
-			
+
 					"decorated-field",
-			
+
 					"field",
-			
+
 					// Static initialization
 					"static-initialization",
-			
+
 					// Constructors
 					"public-constructor",
 					"protected-constructor",
 					"private-constructor",
-			
+
 					"constructor",
-			
+
 					// Accessors
 					"public-static-accessor",
 					"protected-static-accessor",
 					"private-static-accessor",
 					"#private-static-accessor",
-			
+
 					"public-decorated-accessor",
 					"protected-decorated-accessor",
 					"private-decorated-accessor",
-			
+
 					"public-instance-accessor",
 					"protected-instance-accessor",
 					"private-instance-accessor",
 					"#private-instance-accessor",
-			
+
 					"public-abstract-accessor",
 					"protected-abstract-accessor",
-			
+
 					"public-accessor",
 					"protected-accessor",
 					"private-accessor",
 					"#private-accessor",
-			
+
 					"static-accessor",
 					"instance-accessor",
 					"abstract-accessor",
-			
+
 					"decorated-accessor",
-			
+
 					"accessor",
-			
+
 					// Getters
 					"public-static-get",
 					"protected-static-get",
 					"private-static-get",
 					"#private-static-get",
-			
+
 					"public-decorated-get",
 					"protected-decorated-get",
 					"private-decorated-get",
-			
+
 					"public-instance-get",
 					"protected-instance-get",
 					"private-instance-get",
 					"#private-instance-get",
-			
+
 					"public-abstract-get",
 					"protected-abstract-get",
-			
+
 					"public-get",
 					"protected-get",
 					"private-get",
 					"#private-get",
-			
+
 					"static-get",
 					"instance-get",
 					"abstract-get",
-			
+
 					"decorated-get",
-			
+
 					"get",
-			
+
 					// Setters
 					"public-static-set",
 					"protected-static-set",
 					"private-static-set",
 					"#private-static-set",
-			
+
 					"public-decorated-set",
 					"protected-decorated-set",
 					"private-decorated-set",
-			
+
 					"public-instance-set",
 					"protected-instance-set",
 					"private-instance-set",
 					"#private-instance-set",
-			
+
 					"public-abstract-set",
 					"protected-abstract-set",
-			
+
 					"public-set",
 					"protected-set",
 					"private-set",
 					"#private-set",
-			
+
 					"static-set",
 					"instance-set",
 					"abstract-set",
-			
+
 					"decorated-set",
-			
+
 					"set",
-			
+
 					// Methods
 					"public-static-method",
 					"protected-static-method",
 					"private-static-method",
 					"#private-static-method",
-			
+
 					"public-decorated-method",
 					"protected-decorated-method",
 					"private-decorated-method",
-			
+
 					"public-instance-method",
 					"protected-instance-method",
 					"private-instance-method",
 					"#private-instance-method",
-			
+
 					"public-abstract-method",
 					"protected-abstract-method",
-			
+
 					"public-method",
 					"protected-method",
 					"private-method",
 					"#private-method",
-			
+
 					"static-method",
 					"instance-method",
 					"abstract-method",
-			
+
 					"decorated-method",
-			
+
 					"method",
 				],
 			},
@@ -589,10 +589,10 @@ export default [modulesConfig, ...esnextEslint, {
 		"@typescript-eslint/no-magic-numbers": [
 			"warn",
 			{
-				"ignoreArrayIndexes": true,
-				"enforceConst": true,
-				"detectObjects": true,
-				"ignore": [
+				ignoreArrayIndexes: true,
+				enforceConst: true,
+				detectObjects: true,
+				ignore: [
 					-10,
 					-9,
 					-8,
@@ -620,7 +620,7 @@ export default [modulesConfig, ...esnextEslint, {
 		"@typescript-eslint/no-redeclare": [
 			"error",
 			{
-				"ignoreDeclarationMerge": true,
+				ignoreDeclarationMerge: true,
 			},
 		],
 		"@typescript-eslint/no-restricted-imports": [
@@ -635,8 +635,8 @@ export default [modulesConfig, ...esnextEslint, {
 		"@typescript-eslint/no-unused-expressions": [
 			"warn",
 			{
-				"allowShortCircuit": true,
-				"allowTaggedTemplates": true,
+				allowShortCircuit: true,
+				allowTaggedTemplates: true,
 			},
 		],
 		"@typescript-eslint/no-unused-vars": [
@@ -645,13 +645,13 @@ export default [modulesConfig, ...esnextEslint, {
 		"@typescript-eslint/no-use-before-define": [
 			"error",
 			{
-				"classes": false,
+				classes: false,
 			},
 		],
 		"@typescript-eslint/no-useless-constructor": [
 			"warn",
 		],
-		
+
 		"@typescript-eslint/require-await": [
 			"warn",
 		],
@@ -663,5 +663,5 @@ export default [modulesConfig, ...esnextEslint, {
 
 	},
 
-	
+
 }] as const;

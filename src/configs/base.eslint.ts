@@ -14,54 +14,54 @@ export default [
 	...markdownEslint,
 	regexpEslint,
 	stylisticConfig,
-	personalPluginEslint, 
+	personalPluginEslint,
 	promiseEslint,
 	{
-		"name": "base",
-		"files": [	
+		name: "base",
+		files: [
 			"**/*.{js,jsx}",
 		],
-		"plugins": {
+		plugins: {
 			"simple-import-sort": simpleImportSort,
 		},
-		"linterOptions": {
-			"reportUnusedDisableDirectives": true,
+		linterOptions: {
+			reportUnusedDisableDirectives: true,
 		},
-		"rules": {
+		rules: {
 			"no-with": [
 				"error",
 			],
 			"no-restricted-syntax": [
 				"warn",
 				{
-					"selector": ":matches(CallExpression, NewExpression)[callee.type=/^(?:(?:Array|Object)Expression|(?:Template)?Literal)$/]",
-					"message": "Attempting to call or use `new` on literals will result in a runtime error.",
+					selector: ":matches(CallExpression, NewExpression)[callee.type=/^(?:(?:Array|Object)Expression|(?:Template)?Literal)$/]",
+					message: "Attempting to call or use `new` on literals will result in a runtime error.",
 				},
 				{
-					"selector": "CallExpression[callee.name='setTimeout'][arguments.length<1]",
-					"message": "`setTimeout()` requires at least 1 argument(s).",
+					selector: "CallExpression[callee.name='setTimeout'][arguments.length<1]",
+					message: "`setTimeout()` requires at least 1 argument(s).",
 				},
 				{
-					"selector": "CallExpression[callee.name='setTimeout'][arguments.0.type=/^(?:(?:Class|Array|Object)Expression|(?:Template)?Literal)$/]",
-					"message": "`setTimeout()` expects a function at argument #1.",
+					selector: "CallExpression[callee.name='setTimeout'][arguments.0.type=/^(?:(?:Class|Array|Object)Expression|(?:Template)?Literal)$/]",
+					message: "`setTimeout()` expects a function at argument #1.",
 				},
 				{
-					"selector": "CallExpression[callee.name='console']",
-					"message": "Expected a call to a method from `console`.",
+					selector: "CallExpression[callee.name='console']",
+					message: "Expected a call to a method from `console`.",
 				},
 				{
-					"selector": "CallExpression[callee.object.name='console'][callee.property.name=/^(debug|info|log|warn|error)$/][arguments.length=0]",
-					"message": "Calling this method from `console` with no arguments has no effect.",
+					selector: "CallExpression[callee.object.name='console'][callee.property.name=/^(debug|info|log|warn|error)$/][arguments.length=0]",
+					message: "Calling this method from `console` with no arguments has no effect.",
 				},
 				{
-					"selector": "ExpressionStatement > MemberExpression[object.name='console']",
-					"message": "Expected a function call to a method from `console`.",
+					selector: "ExpressionStatement > MemberExpression[object.name='console']",
+					message: "Expected a function call to a method from `console`.",
 				},
 			],
 			"space-infix-ops": [
 				"warn",
 				{
-					"int32Hint": false,
+					int32Hint: false,
 				},
 			],
 			"operator-assignment": [
@@ -112,7 +112,7 @@ export default [
 				"warn",
 				"before",
 				{
-					"overrides": {
+					overrides: {
 						"=": "after",
 					},
 				},
@@ -138,9 +138,9 @@ export default [
 			"accessor-pairs": [
 				"warn",
 				{
-					"getWithoutSet": false,
-					"setWithoutGet": true,
-					"enforceForClassMembers": true,
+					getWithoutSet: false,
+					setWithoutGet: true,
+					enforceForClassMembers: true,
 				},
 			],
 			"no-unsafe-finally": [
@@ -167,8 +167,8 @@ export default [
 			"comma-spacing": [
 				"warn",
 				{
-					"after": true,
-					"before": false,
+					after: true,
+					before: false,
 				},
 			],
 			"default-param-last": [
@@ -177,8 +177,8 @@ export default [
 			"dot-notation": [
 				"warn",
 				{
-					"allowKeywords": true,
-					"allowPattern": "",
+					allowKeywords: true,
+					allowPattern: "",
 				},
 			],
 			"dot-location": [
@@ -196,7 +196,7 @@ export default [
 				"warn",
 				"declaration",
 				{
-					"allowArrowFunctions": true,
+					allowArrowFunctions: true,
 				},
 			],
 			"getter-return": [
@@ -216,11 +216,11 @@ export default [
 				"warn",
 				"tab",
 				{
-					"MemberExpression": "off",
-					"SwitchCase": 1,
-					"flatTernaryExpressions": true,
-					"offsetTernaryExpressions": false,
-					"ImportDeclaration": 1,
+					MemberExpression: "off",
+					SwitchCase: 1,
+					flatTernaryExpressions: true,
+					offsetTernaryExpressions: false,
+					ImportDeclaration: 1,
 				},
 			],
 			"key-spacing": [
@@ -229,111 +229,111 @@ export default [
 			"keyword-spacing": [
 				"warn",
 				{
-					"before": true,
+					before: true,
 				},
 			],
 			"padding-line-between-statements": [
 				"warn",
 				{
-					"blankLine": "always",
-					"prev": "*",
-					"next": "return",
+					blankLine: "always",
+					prev: "*",
+					next: "return",
 				},
 				{
-					"blankLine": "always",
-					"prev": "*",
-					"next": "multiline-block-like",
+					blankLine: "always",
+					prev: "*",
+					next: "multiline-block-like",
 				},
 				{
-					"blankLine": "always",
-					"prev": "multiline-block-like",
-					"next": "*",
+					blankLine: "always",
+					prev: "multiline-block-like",
+					next: "*",
 				},
 				{
-					"blankLine": "always",
-					"prev": [
+					blankLine: "always",
+					prev: [
 						"function",
 						"class",
 					],
-					"next": "*",
+					next: "*",
 				},
 				{
-					"blankLine": "always",
-					"prev": [
+					blankLine: "always",
+					prev: [
 						"const",
 						"let",
 						"var",
 					],
-					"next": [
+					next: [
 						"*",
 					],
 				},
 				{
-					"blankLine": "never",
-					"prev": [
+					blankLine: "never",
+					prev: [
 						"const",
 						"let",
 						"var",
 					],
-					"next": [
+					next: [
 						"const",
 						"let",
 						"var",
 					],
 				},
 				{
-					"blankLine": "never",
-					"prev": "*",
-					"next": "directive",
+					blankLine: "never",
+					prev: "*",
+					next: "directive",
 				},
 				{
-					"blankLine": "always",
-					"prev": "directive",
-					"next": "*",
+					blankLine: "always",
+					prev: "directive",
+					next: "*",
 				},
 				{
-					"blankLine": "any",
-					"prev": "directive",
-					"next": "directive",
+					blankLine: "any",
+					prev: "directive",
+					next: "directive",
 				},
 				{
-					"blankLine": "always",
-					"prev": "*",
-					"next": "export",
+					blankLine: "always",
+					prev: "*",
+					next: "export",
 				},
 				{
-					"blankLine": "always",
-					"prev": "export",
-					"next": "*",
+					blankLine: "always",
+					prev: "export",
+					next: "*",
 				},
 				{
-					"blankLine": "never",
-					"prev": "export",
-					"next": "export",
+					blankLine: "never",
+					prev: "export",
+					next: "export",
 				},
 				{
-					"blankLine": "always",
-					"prev": [
+					blankLine: "always",
+					prev: [
 						"cjs-import",
 						"import",
 					],
-					"next": "*",
+					next: "*",
 				},
 				{
-					"blankLine": "any",
-					"prev": [
+					blankLine: "any",
+					prev: [
 						"cjs-import",
 						"import",
 					],
-					"next": [
+					next: [
 						"cjs-import",
 						"import",
 					],
 				},
 				{
-					"blankLine": "always",
-					"prev": "*",
-					"next": [
+					blankLine: "always",
+					prev: "*",
+					next: [
 						"class",
 						"function",
 					],
@@ -345,11 +345,11 @@ export default [
 			"max-len": [
 				"warn",
 				{
-					"code": 120,
-					"ignoreComments": true,
-					"ignoreTemplateLiterals": true,
-					"ignoreRegExpLiterals": true,
-					"ignoreTrailingComments": true,
+					code: 120,
+					ignoreComments: true,
+					ignoreTemplateLiterals: true,
+					ignoreRegExpLiterals: true,
+					ignoreTrailingComments: true,
 				},
 			],
 			"multiline-ternary": [
@@ -378,20 +378,20 @@ export default [
 				"warn",
 				"beside",
 				{
-					"overrides": {
-						"while": "below",
-						"for": "below",
-						"do": "below",
+					overrides: {
+						while: "below",
+						for: "below",
+						do: "below",
 					},
 				},
 			],
 			"no-irregular-whitespace": [
 				"warn",
 				{
-					"skipStrings": true,
-					"skipComments": true,
-					"skipRegExps": true,
-					"skipTemplates": true,
+					skipStrings: true,
+					skipComments: true,
+					skipRegExps: true,
+					skipTemplates: true,
 				},
 			],
 			"no-import-assign": [
@@ -415,7 +415,7 @@ export default [
 			"no-duplicate-imports": [
 				"warn",
 				{
-					"includeExports": true,
+					includeExports: true,
 				},
 			],
 			"no-extend-native": [
@@ -451,9 +451,9 @@ export default [
 			"no-multiple-empty-lines": [
 				"warn",
 				{
-					"max": 3,
-					"maxEOF": 0,
-					"maxBOF": 0,
+					max: 3,
+					maxEOF: 0,
+					maxBOF: 0,
 				},
 			],
 			"no-new-symbol": [
@@ -468,7 +468,7 @@ export default [
 			"no-tabs": [
 				"warn",
 				{
-					"allowIndentationTabs": true,
+					allowIndentationTabs: true,
 				},
 			],
 			"no-this-before-super": [
@@ -477,7 +477,7 @@ export default [
 			"no-trailing-spaces": [
 				"warn",
 				{
-					"ignoreComments": true,
+					ignoreComments: true,
 				},
 			],
 			"no-undef": [
@@ -486,8 +486,8 @@ export default [
 			"no-unused-expressions": [
 				"warn",
 				{
-					"allowShortCircuit": true,
-					"allowTaggedTemplates": true,
+					allowShortCircuit: true,
+					allowTaggedTemplates: true,
 				},
 			],
 			"no-unneeded-ternary": [
@@ -521,8 +521,8 @@ export default [
 				"warn",
 				"always",
 				{
-					"ignoreConstructors": true,
-					"avoidExplicitReturnArrows": true,
+					ignoreConstructors: true,
+					avoidExplicitReturnArrows: true,
 				},
 			],
 			"no-useless-concat": [
@@ -543,10 +543,10 @@ export default [
 			"no-magic-numbers": [
 				"warn",
 				{
-					"ignoreArrayIndexes": true,
-					"enforceConst": true,
-					"detectObjects": true,
-					"ignore": [
+					ignoreArrayIndexes: true,
+					enforceConst: true,
+					detectObjects: true,
+					ignore: [
 						-10,
 						-9,
 						-8,
@@ -582,7 +582,7 @@ export default [
 			"prefer-const": [
 				"warn",
 				{
-					"destructuring": "all",
+					destructuring: "all",
 				},
 			],
 			"prefer-destructuring": [
@@ -594,7 +594,7 @@ export default [
 			"prefer-arrow-callback": [
 				"warn",
 				{
-					"allowUnboundThis": true,
+					allowUnboundThis: true,
 				},
 			],
 			"prefer-numeric-literals": [
@@ -607,15 +607,15 @@ export default [
 				"warn",
 				"double",
 				{
-					"avoidEscape": true,
-					"allowTemplateLiterals": true,
+					avoidEscape: true,
+					allowTemplateLiterals: true,
 				},
 			],
 			"arrow-spacing": [
 				"warn",
 				{
-					"before": true,
-					"after": true,
+					before: true,
+					after: true,
 				},
 			],
 			"semi-spacing": [
@@ -634,11 +634,11 @@ export default [
 			"sort-imports": [
 				"warn",
 				{
-					"ignoreCase": false,
-					"ignoreDeclarationSort": false,
-					"ignoreMemberSort": false,
-					"allowSeparatedGroups": true,
-					"memberSyntaxSortOrder": [
+					ignoreCase: false,
+					ignoreDeclarationSort: false,
+					ignoreMemberSort: false,
+					allowSeparatedGroups: true,
+					memberSyntaxSortOrder: [
 						"none",
 						"all",
 						"single",
@@ -665,14 +665,14 @@ export default [
 				"warn",
 				"always",
 				{
-					"line": {
-						"exceptions": [
+					line: {
+						exceptions: [
 							"/",
 							"*",
 						],
 					},
-					"block": {
-						"balanced": false,
+					block: {
+						balanced: false,
 					},
 				},
 			],
@@ -731,20 +731,20 @@ export default [
 				"warn",
 				"always",
 				{
-					"exceptAfterSingleLine": true,
+					exceptAfterSingleLine: true,
 				},
 			],
 			"max-nested-callbacks": [
 				"warn",
 				{
-					"max": 3,
+					max: 3,
 				},
 			],
 			"eqeqeq": [
 				"warn",
 				"always",
 				{
-					"null": "ignore",
+					null: "ignore",
 				},
 			],
 			"no-constructor-return": [
@@ -768,7 +768,7 @@ export default [
 			"no-self-assign": [
 				"warn",
 				{
-					"props": true,
+					props: true,
 				},
 			],
 			"no-throw-literal": [
@@ -783,7 +783,7 @@ export default [
 			"no-void": [
 				"warn",
 				{
-					"allowAsStatement": true,
+					allowAsStatement: true,
 				},
 			],
 			"prefer-named-capture-group": [
@@ -792,7 +792,7 @@ export default [
 			"prefer-regex-literals": [
 				"warn",
 				{
-					"disallowRedundantWrapping": false,
+					disallowRedundantWrapping: false,
 				},
 			],
 			"constructor-super": [
@@ -814,7 +814,7 @@ export default [
 			"no-empty": [
 				"warn",
 				{
-					"allowEmptyCatch": false,
+					allowEmptyCatch: false,
 				},
 			],
 			"no-empty-character-class": [
@@ -823,7 +823,7 @@ export default [
 			"no-extra-boolean-cast": [
 				"warn",
 				{
-					"enforceForLogicalOperands": false,
+					enforceForLogicalOperands: false,
 				},
 			],
 			"no-extra-semi": [
@@ -842,7 +842,7 @@ export default [
 				"warn",
 				"1tbs",
 				{
-					"allowSingleLine": true,
+					allowSingleLine: true,
 				},
 			],
 			"function-paren-newline": [
@@ -860,19 +860,19 @@ export default [
 			"id-length": [
 				"warn",
 				{
-					"min": 1,
-					"max": 35,
-					"properties": "always",
+					min: 1,
+					max: 35,
+					properties: "always",
 				},
 			],
 			"no-underscore-dangle": [
 				"warn",
 				{
-					"allowAfterThis": true,
-					"allowAfterSuper": true,
-					"allowAfterThisConstructor": true,
-					"enforceInMethodNames": true,
-					"allowFunctionParams": true,
+					allowAfterThis: true,
+					allowAfterSuper: true,
+					allowAfterThisConstructor: true,
+					enforceInMethodNames: true,
+					allowFunctionParams: true,
 				},
 			],
 			"one-var": [
@@ -892,7 +892,7 @@ export default [
 			"switch-colon-spacing": [
 				"warn",
 				{
-					"after": true,
+					after: true,
 				},
 			],
 			"template-tag-spacing": [
@@ -917,8 +917,8 @@ export default [
 			"object-curly-newline": [
 				"warn",
 				{
-					"consistent": true,
-					"multiline": true,
+					consistent: true,
+					multiline: true,
 				},
 			],
 			"simple-import-sort/imports": [
@@ -928,4 +928,5 @@ export default [
 				"warn",
 			],
 		},
-	}] as const;
+	},
+] as const;

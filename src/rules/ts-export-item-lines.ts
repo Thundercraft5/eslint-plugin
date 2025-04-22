@@ -2,9 +2,6 @@ import type { ReportFixFunction } from "@typescript-eslint/utils/ts-eslint";
 import { createRule } from "../util/index.ts";
 
 
-
-
-
 import type { ASTUtils, ESLintUtils } from "@typescript-eslint/utils";
 
 

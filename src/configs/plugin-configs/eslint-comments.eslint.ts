@@ -2,13 +2,13 @@ import eslintComments from "eslint-plugin-comments";
 
 export default {
 	name: "plugin/eslint-comments",
-	"files": [
+	files: [
 		"**/*.{js,ts,tsx,jsx}",
 	],
-	"plugins": {
+	plugins: {
 		"eslint-comments": eslintComments,
 	},
-	"rules": {
+	rules: {
 		"eslint-comments/no-unused-disable": [
 			"warn",
 		],
@@ -24,7 +24,7 @@ export default {
 		"eslint-comments/no-use": [
 			"warn",
 			{
-				"allow": [
+				allow: [
 					"eslint-disable-next-line",
 					"eslint-disable-line",
 					"eslint-enable",
@@ -34,4 +34,4 @@ export default {
 			},
 		],
 	},
-};	
+};

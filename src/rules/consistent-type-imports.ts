@@ -1,10 +1,9 @@
- 
 // import { ImportDefaultSpecifier, ImportSpecifier } from "@typescript-eslint/utils";
 import { AST_NODE_TYPES, ESLintUtils } from "@typescript-eslint/utils";
 import * as tsutils from "tsutils";
 import * as ts from "typescript";
 
-import { createRule } from "../util/index.ts";	
+import { createRule } from "../util/index.ts";
 
 export const defaultOptions = [] as const;export default createRule({
 	name: "@thundercraft5/consistent-type-imports",
@@ -29,7 +28,7 @@ export const defaultOptions = [] as const;export default createRule({
 					&& node.specifiers
 					&& node.specifiers.filter(n => n.type === "ImportSpecifier" && n.importKind === "value").length === 0 // Only type imports are in this declaration
 					&& node.specifiers.findIndex(n => n.type === "ImportNamespaceSpecifier"
-						|| n.type === "ImportDefaultSpecifier",
+					  || n.type === "ImportDefaultSpecifier",
 					) === -1 // Is not a namespace or default import
 				) {
 					const source = context.getSourceCode();
