@@ -29,9 +29,9 @@
 	},
 	"scripts": {
 		"prepublishOnly": "npm run build && git push",
-		"ver:minor": "pnpm version minor && git push --follow-tags",
-		"ver:major": "pnpm version major && git push --follow-tags",
-		"ver:patch": "pnpm version patch && git push --follow-tags",
+		"ver:minor": "pnpm version minor && git push --follow-tags && npm publish",
+		"ver:major": "pnpm version major && git push --follow-tags && npm publish",
+		"ver:patch": "pnpm version patch && git push --follow-tags && npm publish",
 		"build:types": "tsc --declaration --declarationMap --emitDeclarationOnly --declarationDir ./dist/types --module esnext",
 		"build:esm": "tsc -b -f",
 		"build:cjs": "tsup-node ./src --out-dir ./dist/cjs --shims --target esnext --sourcemap --format cjs && copyfiles ./configs/**/*.json ./dist/cjs -u 1 -F && copy .\\wrappers\\index.cjs .\\dist\\cjs\\wrapper.cjs",
