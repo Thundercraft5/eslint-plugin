@@ -8,7 +8,7 @@
 		"url": "https://github.com/thundercraft5/eslint-plugin/issues"
 	},
 	"author": "Thundercraft5",
-	"version": "2.1.1",
+	"version": "2.1.2",
 	"license": "MIT",
 	"description": "Personal ESLint configuration and plugin",
 	"exports": {
