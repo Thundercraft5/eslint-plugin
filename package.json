@@ -8,7 +8,7 @@
 		"url": "https://github.com/thundercraft5/eslint-plugin/issues"
 	},
 	"author": "Thundercraft5",
-	"version": "2.1.0",
+	"version": "2.1.1",
 	"license": "MIT",
 	"description": "Personal ESLint configuration and plugin",
 	"exports": {
@@ -35,7 +35,8 @@
 		"build": "del-cli ./dist/** -f && npm run build:types & npm run build:cjs & npm run build:esm",
 		"watch": "concurrently -k \"tsup ./src --watch --out-dir ./dist/cjs --shims --target esnext --sourcemap --format cjs\" \"tsc -w\""
 	},
-	"devDependencies": {		"@thundercraft5/eslint-plugin": "file:.",
+	"devDependencies": {
+		"@thundercraft5/eslint-plugin": "file:.",
 		"@thundercraft5/tsconfig": "^2.0.0",
 		"@thundercraft5/type-utils": "^4.0.2",
 		"@types/node": "^22.10.3",
@@ -43,7 +44,8 @@
 		"@typescript-eslint/parser": "8.19.1-alpha.6",
 		"@typescript-eslint/types": "^8.19.1-alpha.6",
 		"copyfiles": "2.4.1",
-		"del-cli": "6.0.0",		"ts-node": "11.0.0-beta.1",
+		"del-cli": "6.0.0",
+		"ts-node": "11.0.0-beta.1",
 		"tsup": "^8.3.5",
 		"typescript": "5.8.0-dev.20241231"
 	},
