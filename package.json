@@ -31,7 +31,7 @@
 		"prepublishOnly": "npm run build",
 		"build:types": "tsc --declaration --declarationMap --emitDeclarationOnly --declarationDir ./dist/types --module esnext",
 		"build:esm": "tsc -b -f",
-		"build:cjs": "tsup ./src --out-dir ./dist/cjs --shims --target esnext --sourcemap --format cjs && copyfiles ./configs/**/*.json ./dist/cjs -u 1 -F && copy .\\wrappers\\index.cjs .\\dist\\cjs\\wrapper.cjs",
+		"build:cjs": "tsup-node ./src --out-dir ./dist/cjs --shims --target esnext --sourcemap --format cjs && copyfiles ./configs/**/*.json ./dist/cjs -u 1 -F && copy .\\wrappers\\index.cjs .\\dist\\cjs\\wrapper.cjs",
 		"build": "del-cli ./dist/** -f && npm run build:types & npm run build:cjs & npm run build:esm",
 		"watch": "concurrently -k \"tsup ./src --watch --out-dir ./dist/cjs --shims --target esnext --sourcemap --format cjs\" \"tsc -w\""
 	},

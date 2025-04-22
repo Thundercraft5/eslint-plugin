@@ -3207,6 +3207,7 @@ snapshots:
       eslint-plugin-mdx: 3.1.5(eslint@9.17.0)
       eslint-plugin-node: 11.1.0(eslint@9.17.0)
       eslint-plugin-perfectionist: 4.5.0(eslint@9.17.0)(typescript@5.8.0-dev.20241231)
+      eslint-plugin-promise: 7.2.1(eslint@9.17.0)
       eslint-plugin-react: 7.37.3(eslint@9.17.0)
       globals: 15.14.0
       tsutils: 3.21.0(typescript@5.8.0-dev.20241231)

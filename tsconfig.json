@@ -1,5 +1,5 @@
 {
-	"extends": "@thundercraft5/tsconfig/node-next.tsconfig.json",
+	"extends": "@thundercraft5/tsconfig/node-next.json",
 	"compilerOptions": {
 		"rootDir": "./src",
 		"baseUrl": "./src",
@@ -16,6 +16,9 @@
 		"rewriteRelativeImportExtensions": true
 	},
 	"include": [
-		"src/**/*.ts"
-, "src/test/index.ts"	]
+		"src/**/*.ts", "src/**/*.d.ts"
+, "src/test/index.ts"	],
+		"exclude": [
+			"node_modules/**",
+		]
 }

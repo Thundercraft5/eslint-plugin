@@ -1,4 +1,4 @@
-import promise from "eslint-plugin-promise";
+import promise from "eslint-plugin-promise"; // @ts-ignore
 
 export default {
 	name: "promise",

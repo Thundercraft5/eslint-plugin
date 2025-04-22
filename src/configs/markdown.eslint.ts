@@ -1,4 +1,4 @@
-import markdown from "eslint-plugin-markdown"; // @ts-expect-error
+import markdown from "eslint-plugin-markdown"; 
 
 export default [
 	{
