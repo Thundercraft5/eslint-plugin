@@ -14,7 +14,7 @@ export default [
 	...markdownEslint,
 	regexpEslint,
 	stylisticConfig,
-	personalPluginEslint,
+	...personalPluginEslint,
 	promiseEslint,
 	{
 		name: "base",
