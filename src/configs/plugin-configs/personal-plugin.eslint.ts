@@ -18,8 +18,11 @@ const base = {
 export default [base, {
 	...base,
 	"files": [
-		"*/**.{ts,tsx,mts,cts, mdx}",
+		"*/**.{ts,tsx,mts,cts,mdx}",
 	],
 	"name": "plugin/thundercraft5/ts-rules",
-	"@thundercraft5/no-ambiguous-type-only-imports": "warn",
+	"rules": {
+		"@thundercraft5/no-ambiguous-type-only-imports": "warn",
+
+	}
 }];
